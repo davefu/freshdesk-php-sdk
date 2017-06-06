@@ -145,6 +145,62 @@ $tickets = $this->tickets->view(['company_id' => $companyId]);
 Please read the Freshdesk documentation for further information on
 filtering `GET` requests.
 
+### Data with attachments
+
+Format (required only for attachment values) for data value is array of:
+
+* **name**: value name
+* **contents**: value
+* **filename (optional)**: file name of attachment
+
+You can use one of these approaches:
+1. for other values than attachment, you can use same format as for JSON request (array values are automaticaly converted to appropriate format):
+
+	```php
+	[
+		'valueName' => 'value',
+		...
+	]
+	```
+2. single (attachment) value:
+
+	```php
+	[
+		'attachments' => [
+			'name' => 'attachments[]',
+			'contents' => fopen('pathToFile', 'r'),
+			'filename' => 'fileName.ext'
+		],
+		...
+	]
+	```
+3. array of attachements with previous format:
+
+	```php
+	[
+		'attachments' => [
+			[
+				'name' => 'attachments[]',
+				'contents' => fopen('pathToFile', 'r'),
+				'filename' => 'fileName.ext',
+			],
+			...
+		],
+		...
+	]
+	```
+4. you can use JSON format for attachements too, but you lose option to specify filename (only array of file resources works fine!):
+
+	```php
+	[
+		'attachments' => [
+			fopen('pathToFile', 'r'),
+			...
+		],
+		...
+	]
+	```
+
 ## Contributing
 
 This is a work in progress and PRs are welcome. Please read the 
@@ -155,7 +211,7 @@ which Freshdesk has not yet implemented.
 
 - [ ] Solutions
 - [ ] Surveys
-- [ ] Uploading files is not yet supported
+- [ ] Uploading files is in beta and only for `Tickets`
 - [ ] More tests. You can never have enough!
 - [ ] Nicer documentation
 

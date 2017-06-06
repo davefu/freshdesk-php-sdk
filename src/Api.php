@@ -208,15 +208,20 @@ class Api
      * @param $endpoint
      * @param array|null $data
      * @param array|null $query
+	 * @param boolean $attachmentsIncluded if true send request as multipart/form-data content-type
      * @return mixed|null
      * @throws ApiException
      * @throws ConflictingStateException
      * @throws RateLimitExceededException
      * @throws UnsupportedContentTypeException
      */
-    public function request($method, $endpoint, array $data = null, array $query = null)
+    public function request($method, $endpoint, array $data = null, array $query = null, $attachmentsIncluded = false)
     {
-        $options = ['json' => $data];
+		if ($attachmentsIncluded) {
+			$options = ['multipart' => $this->convertToMultipartData($data)];
+		} else {
+			$options = ['json' => $data];
+		}
 
         if (isset($query)) {
             $options['query'] = $query;
@@ -308,4 +313,55 @@ class Api
         $this->slaPolicies = new SLAPolicy($this);
         $this->businessHours = new BusinessHour($this);
     }
+	
+	/**
+	 * @param array|null $data
+	 * @return array
+	 * @internal
+	 */
+	private function convertToMultipartData(array $data) {
+		$output = [];
+		foreach ($data as $key => $value){
+			if (is_array($value)) {
+				if (isset($value['name']) && isset($value['contents'])) {
+					//first level multipart data
+					$output[] = $value;
+				} else {
+					foreach ($value as $content) {
+						if ($this->isMultipartData($content)) {
+							//array of multipart data
+							$output[] = $content;
+						} else {
+							$output[] = $this->createMultipartValue($key . '[]', $content);
+						}
+					}
+				}
+			} else {
+				$output[] = $this->createMultipartValue($key, $value);
+			}
+		}
+		return $output;
+	}
+	
+	/**
+	 * @param mixed $data
+	 * @return boolean
+	 * @internal
+	 */
+	private function isMultipartData($data) {
+		return is_array($data) && isset($data['name']) && isset($data['contents']);
+	}
+	
+	/**
+	 * @param string $name
+	 * @param mixed $contents
+	 * @return array
+	 * @internal
+	 */
+	private function createMultipartValue($name, $contents) {
+		return [
+			'name' => $name,
+			'contents' => $contents,
+		];
+	}
 }

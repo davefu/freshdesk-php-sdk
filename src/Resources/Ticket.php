@@ -13,6 +13,8 @@ use Freshdesk\Resources\Traits\CreateTrait;
 use Freshdesk\Resources\Traits\DeleteTrait;
 use Freshdesk\Resources\Traits\UpdateTrait;
 use Freshdesk\Resources\Traits\ViewTrait;
+use Freshdesk\Resources\Traits\CreateWithAttachmentsTrait;
+use Freshdesk\Resources\Traits\UpdateWithAttachmentsTrait;
 
 /**
  * Ticket resource
@@ -24,7 +26,7 @@ use Freshdesk\Resources\Traits\ViewTrait;
 class Ticket extends AbstractResource
 {
 
-    use AllTrait, CreateTrait, ViewTrait, UpdateTrait, DeleteTrait;
+    use AllTrait, CreateTrait, ViewTrait, UpdateTrait, DeleteTrait, CreateWithAttachmentsTrait, UpdateWithAttachmentsTrait;
 
     /**
      * The resource endpoint
