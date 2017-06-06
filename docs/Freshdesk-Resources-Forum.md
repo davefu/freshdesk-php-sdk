@@ -39,7 +39,7 @@ Create a forum for a category.
 
 ### all
 
-    mixed Freshdesk\Resources\Forum::all(array|null $query)
+    array|null Freshdesk\Resources\Forum::all(array|null $query)
 
 Get a list of all agents.
 

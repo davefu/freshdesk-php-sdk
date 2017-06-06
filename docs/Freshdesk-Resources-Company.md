@@ -38,7 +38,7 @@ List resource fields
 
 ### all
 
-    mixed Freshdesk\Resources\Company::all(array|null $query)
+    array|null Freshdesk\Resources\Company::all(array|null $query)
 
 Get a list of all agents.
 

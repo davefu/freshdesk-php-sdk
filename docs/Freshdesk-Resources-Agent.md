@@ -38,7 +38,7 @@ Get the currently authenticated agent
 
 ### all
 
-    mixed Freshdesk\Resources\Agent::all(array|null $query)
+    array|null Freshdesk\Resources\Agent::all(array|null $query)
 
 Get a list of all agents.
 

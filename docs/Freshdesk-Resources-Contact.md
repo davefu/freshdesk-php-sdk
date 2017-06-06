@@ -59,7 +59,7 @@ Note:
 
 ### all
 
-    mixed Freshdesk\Resources\Contact::all(array|null $query)
+    array|null Freshdesk\Resources\Contact::all(array|null $query)
 
 Get a list of all agents.
 

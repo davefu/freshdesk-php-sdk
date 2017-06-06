@@ -102,7 +102,7 @@ List time entries associated with a ticket
 
 ### all
 
-    mixed Freshdesk\Resources\Ticket::all(array|null $query)
+    array|null Freshdesk\Resources\Ticket::all(array|null $query)
 
 Get a list of all agents.
 
@@ -181,5 +181,38 @@ Delete a resource by $id
 
 #### Arguments
 * $id **Freshdesk\Resources\Traits\in** - &lt;p&gt;The resource id&lt;/p&gt;
+
+
+
+### createWithAttachments
+
+    array|null Freshdesk\Resources\Ticket::createWithAttachments(array $data)
+
+Create a resource with attachments
+
+Create a resource with the supplied data
+
+* Visibility: **public**
+
+
+#### Arguments
+* $data **array** - &lt;p&gt;The data&lt;/p&gt;
+
+
+
+### updateWithAttachments
+
+    array|null Freshdesk\Resources\Ticket::updateWithAttachments(integer $id, array $data)
+
+Update a resource with attachments
+
+Updates the resources for the given $id with the supplied data/.
+
+* Visibility: **public**
+
+
+#### Arguments
+* $id **integer** - &lt;p&gt;The resource id&lt;/p&gt;
+* $data **array** - &lt;p&gt;The data&lt;/p&gt;
 
 

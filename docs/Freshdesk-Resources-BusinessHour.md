@@ -22,7 +22,7 @@ Methods
 
 ### all
 
-    mixed Freshdesk\Resources\BusinessHour::all(array|null $query)
+    array|null Freshdesk\Resources\BusinessHour::all(array|null $query)
 
 Get a list of all agents.
 

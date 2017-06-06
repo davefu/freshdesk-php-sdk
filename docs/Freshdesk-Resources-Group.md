@@ -22,7 +22,7 @@ Methods
 
 ### all
 
-    mixed Freshdesk\Resources\Group::all(array|null $query)
+    array|null Freshdesk\Resources\Group::all(array|null $query)
 
 Get a list of all agents.
 

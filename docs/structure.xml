@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project title="Freshdesk PHP SDK (API v2) Documentation" version="2.8.5">
+<project title="Freshdesk PHP SDK (API v2) Documentation" version="v2.9.0">
   <partials/>
-  <file path="Api.php" generated-path="Api.html" hash="7ed79f26391070d94257e78ce19d8171" package="Default">
+  <file path="Api.php" generated-path="Api.html" hash="c57e73fed12954fde7954671b27127eb" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -13,12 +13,8 @@ Time: 2:32 PM</long-description>
     <namespace-alias name="ApiException">\Freshdesk\Exceptions\ApiException</namespace-alias>
     <namespace-alias name="AuthenticationException">\Freshdesk\Exceptions\AuthenticationException</namespace-alias>
     <namespace-alias name="ConflictingStateException">\Freshdesk\Exceptions\ConflictingStateException</namespace-alias>
-    <namespace-alias name="MethodNotAllowedException">\Freshdesk\Exceptions\MethodNotAllowedException</namespace-alias>
-    <namespace-alias name="NotFoundException">\Freshdesk\Exceptions\NotFoundException</namespace-alias>
     <namespace-alias name="RateLimitExceededException">\Freshdesk\Exceptions\RateLimitExceededException</namespace-alias>
-    <namespace-alias name="UnsupportedAcceptHeaderException">\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</namespace-alias>
     <namespace-alias name="UnsupportedContentTypeException">\Freshdesk\Exceptions\UnsupportedContentTypeException</namespace-alias>
-    <namespace-alias name="ValidationException">\Freshdesk\Exceptions\ValidationException</namespace-alias>
     <namespace-alias name="Agent">\Freshdesk\Resources\Agent</namespace-alias>
     <namespace-alias name="BusinessHour">\Freshdesk\Resources\BusinessHour</namespace-alias>
     <namespace-alias name="Category">\Freshdesk\Resources\Category</namespace-alias>
@@ -36,226 +32,226 @@ Time: 2:32 PM</long-description>
     <namespace-alias name="Topic">\Freshdesk\Resources\Topic</namespace-alias>
     <namespace-alias name="Client">\GuzzleHttp\Client</namespace-alias>
     <namespace-alias name="RequestException">\GuzzleHttp\Exception\RequestException</namespace-alias>
-    <class final="false" abstract="false" namespace="Freshdesk" line="48" package="Api">
+    <class final="false" abstract="false" namespace="Freshdesk" line="44" package="Api">
       <extends/>
       <name>Api</name>
       <full_name>\Freshdesk\Api</full_name>
-      <docblock line="48">
+      <docblock line="44">
         <description>Class for interacting with the Freshdesk Api</description>
         <long-description>This is the only class that should be instantiated directly. All API resources are available
 via the relevant public properties</long-description>
-        <tag name="package" line="48" description="Api"/>
-        <tag name="author" line="48" description="Matthew Clarkson" link="mailto:mpclarkson@gmail.com"/>
+        <tag name="package" line="44" description="Api"/>
+        <tag name="author" line="44" description="Matthew Clarkson" link="mailto:mpclarkson@gmail.com"/>
       </docblock>
-      <property static="false" visibility="public" namespace="Freshdesk" line="56" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="52" package="Api">
         <name>$agents</name>
         <full_name>\Freshdesk\Api::agents</full_name>
         <default></default>
-        <docblock line="56">
+        <docblock line="52">
           <description>Agent resources</description>
           <long-description></long-description>
-          <tag name="api" line="56" description=""/>
-          <tag name="var" line="56" description="" type="\Freshdesk\Resources\Agent" variable="">
+          <tag name="api" line="52" description=""/>
+          <tag name="var" line="52" description="" type="\Freshdesk\Resources\Agent" variable="">
             <type>\Freshdesk\Resources\Agent</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="64" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="60" package="Api">
         <name>$companies</name>
         <full_name>\Freshdesk\Api::companies</full_name>
         <default></default>
-        <docblock line="64">
+        <docblock line="60">
           <description>Company resources</description>
           <long-description></long-description>
-          <tag name="api" line="64" description=""/>
-          <tag name="var" line="64" description="" type="\Freshdesk\Resources\Company" variable="">
+          <tag name="api" line="60" description=""/>
+          <tag name="var" line="60" description="" type="\Freshdesk\Resources\Company" variable="">
             <type>\Freshdesk\Resources\Company</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="72" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="68" package="Api">
         <name>$contacts</name>
         <full_name>\Freshdesk\Api::contacts</full_name>
         <default></default>
-        <docblock line="72">
+        <docblock line="68">
           <description>Contact resources</description>
           <long-description></long-description>
-          <tag name="api" line="72" description=""/>
-          <tag name="var" line="72" description="" type="\Freshdesk\Resources\Contact" variable="">
+          <tag name="api" line="68" description=""/>
+          <tag name="var" line="68" description="" type="\Freshdesk\Resources\Contact" variable="">
             <type>\Freshdesk\Resources\Contact</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="80" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="76" package="Api">
         <name>$groups</name>
         <full_name>\Freshdesk\Api::groups</full_name>
         <default></default>
-        <docblock line="80">
+        <docblock line="76">
           <description>Group resources</description>
           <long-description></long-description>
-          <tag name="api" line="80" description=""/>
-          <tag name="var" line="80" description="" type="\Freshdesk\Resources\Group" variable="">
+          <tag name="api" line="76" description=""/>
+          <tag name="var" line="76" description="" type="\Freshdesk\Resources\Group" variable="">
             <type>\Freshdesk\Resources\Group</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="88" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="84" package="Api">
         <name>$tickets</name>
         <full_name>\Freshdesk\Api::tickets</full_name>
         <default></default>
-        <docblock line="88">
+        <docblock line="84">
           <description>Ticket resources</description>
           <long-description></long-description>
-          <tag name="api" line="88" description=""/>
-          <tag name="var" line="88" description="" type="\Freshdesk\Resources\Ticket" variable="">
+          <tag name="api" line="84" description=""/>
+          <tag name="var" line="84" description="" type="\Freshdesk\Resources\Ticket" variable="">
             <type>\Freshdesk\Resources\Ticket</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="96" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="92" package="Api">
         <name>$timeEntries</name>
         <full_name>\Freshdesk\Api::timeEntries</full_name>
         <default></default>
-        <docblock line="96">
+        <docblock line="92">
           <description>TimeEntry resources</description>
           <long-description></long-description>
-          <tag name="api" line="96" description=""/>
-          <tag name="var" line="96" description="" type="\Freshdesk\Resources\TimeEntry" variable="">
+          <tag name="api" line="92" description=""/>
+          <tag name="var" line="92" description="" type="\Freshdesk\Resources\TimeEntry" variable="">
             <type>\Freshdesk\Resources\TimeEntry</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="104" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="100" package="Api">
         <name>$conversations</name>
         <full_name>\Freshdesk\Api::conversations</full_name>
         <default></default>
-        <docblock line="104">
+        <docblock line="100">
           <description>Conversation resources</description>
           <long-description></long-description>
-          <tag name="api" line="104" description=""/>
-          <tag name="var" line="104" description="" type="\Freshdesk\Resources\Conversation" variable="">
+          <tag name="api" line="100" description=""/>
+          <tag name="var" line="100" description="" type="\Freshdesk\Resources\Conversation" variable="">
             <type>\Freshdesk\Resources\Conversation</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="112" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="108" package="Api">
         <name>$categories</name>
         <full_name>\Freshdesk\Api::categories</full_name>
         <default></default>
-        <docblock line="112">
+        <docblock line="108">
           <description>Category resources</description>
           <long-description></long-description>
-          <tag name="api" line="112" description=""/>
-          <tag name="var" line="112" description="" type="\Freshdesk\Resources\Category" variable="">
+          <tag name="api" line="108" description=""/>
+          <tag name="var" line="108" description="" type="\Freshdesk\Resources\Category" variable="">
             <type>\Freshdesk\Resources\Category</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="120" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="116" package="Api">
         <name>$forums</name>
         <full_name>\Freshdesk\Api::forums</full_name>
         <default></default>
-        <docblock line="120">
+        <docblock line="116">
           <description>Forum resources</description>
           <long-description></long-description>
-          <tag name="api" line="120" description=""/>
-          <tag name="var" line="120" description="" type="\Freshdesk\Resources\Forum" variable="">
+          <tag name="api" line="116" description=""/>
+          <tag name="var" line="116" description="" type="\Freshdesk\Resources\Forum" variable="">
             <type>\Freshdesk\Resources\Forum</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="128" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="124" package="Api">
         <name>$topics</name>
         <full_name>\Freshdesk\Api::topics</full_name>
         <default></default>
-        <docblock line="128">
+        <docblock line="124">
           <description>Topic resources</description>
           <long-description></long-description>
-          <tag name="api" line="128" description=""/>
-          <tag name="var" line="128" description="" type="\Freshdesk\Resources\Topic" variable="">
+          <tag name="api" line="124" description=""/>
+          <tag name="var" line="124" description="" type="\Freshdesk\Resources\Topic" variable="">
             <type>\Freshdesk\Resources\Topic</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="136" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="132" package="Api">
         <name>$comments</name>
         <full_name>\Freshdesk\Api::comments</full_name>
         <default></default>
-        <docblock line="136">
+        <docblock line="132">
           <description>Comment resources</description>
           <long-description></long-description>
-          <tag name="api" line="136" description=""/>
-          <tag name="var" line="136" description="" type="\Freshdesk\Resources\Comment" variable="">
+          <tag name="api" line="132" description=""/>
+          <tag name="var" line="132" description="" type="\Freshdesk\Resources\Comment" variable="">
             <type>\Freshdesk\Resources\Comment</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="146" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="142" package="Api">
         <name>$emailConfigs</name>
         <full_name>\Freshdesk\Api::emailConfigs</full_name>
         <default></default>
-        <docblock line="146">
+        <docblock line="142">
           <description>Email Config resources</description>
           <long-description></long-description>
-          <tag name="api" line="146" description=""/>
-          <tag name="var" line="146" description="" type="\Freshdesk\Resources\EmailConfig" variable="">
+          <tag name="api" line="142" description=""/>
+          <tag name="var" line="142" description="" type="\Freshdesk\Resources\EmailConfig" variable="">
             <type>\Freshdesk\Resources\EmailConfig</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="154" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="150" package="Api">
         <name>$products</name>
         <full_name>\Freshdesk\Api::products</full_name>
         <default></default>
-        <docblock line="154">
+        <docblock line="150">
           <description>Access Product resources</description>
           <long-description></long-description>
-          <tag name="api" line="154" description=""/>
-          <tag name="var" line="154" description="" type="\Freshdesk\Resources\Product" variable="">
+          <tag name="api" line="150" description=""/>
+          <tag name="var" line="150" description="" type="\Freshdesk\Resources\Product" variable="">
             <type>\Freshdesk\Resources\Product</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="162" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="158" package="Api">
         <name>$businessHours</name>
         <full_name>\Freshdesk\Api::businessHours</full_name>
         <default></default>
-        <docblock line="162">
+        <docblock line="158">
           <description>Business Hours resources</description>
           <long-description></long-description>
-          <tag name="api" line="162" description=""/>
-          <tag name="var" line="162" description="" type="\Freshdesk\Resources\BusinessHour" variable="">
+          <tag name="api" line="158" description=""/>
+          <tag name="var" line="158" description="" type="\Freshdesk\Resources\BusinessHour" variable="">
             <type>\Freshdesk\Resources\BusinessHour</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Freshdesk" line="170" package="Api">
+      <property static="false" visibility="public" namespace="Freshdesk" line="166" package="Api">
         <name>$slaPolicies</name>
         <full_name>\Freshdesk\Api::slaPolicies</full_name>
         <default></default>
-        <docblock line="170">
+        <docblock line="166">
           <description>SLA Policy resources</description>
           <long-description></long-description>
-          <tag name="api" line="170" description=""/>
-          <tag name="var" line="170" description="" type="\Freshdesk\Resources\SLAPolicy" variable="">
+          <tag name="api" line="166" description=""/>
+          <tag name="var" line="166" description="" type="\Freshdesk\Resources\SLAPolicy" variable="">
             <type>\Freshdesk\Resources\SLAPolicy</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk" line="192" package="Api">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk" line="188" package="Api">
         <name>__construct</name>
         <full_name>\Freshdesk\Api::__construct()</full_name>
-        <docblock line="192">
+        <docblock line="188">
           <description>Constructs a new api instance</description>
           <long-description></long-description>
-          <tag name="api" line="192" description=""/>
-          <tag name="param" line="192" description="" type="string" variable="$apiKey">
+          <tag name="api" line="188" description=""/>
+          <tag name="param" line="188" description="" type="string" variable="$apiKey">
             <type>string</type>
           </tag>
-          <tag name="param" line="192" description="" type="string" variable="$domain">
+          <tag name="param" line="188" description="" type="string" variable="$domain">
             <type>string</type>
           </tag>
-          <tag name="throws" line="192" description="" type="\Freshdesk\Exceptions\InvalidConfigurationException">
+          <tag name="throws" line="188" description="" type="\Freshdesk\Exceptions\InvalidConfigurationException">
             <type>\Freshdesk\Exceptions\InvalidConfigurationException</type>
           </tag>
         </docblock>
@@ -271,9 +267,9 @@ via the relevant public properties</long-description>
         </argument>
       </method>
     </class>
-    <source>eJytWG1v2zYQ/u5fwRUZ7ARp3GXDPrhtFi9x2mLNZjTJMCApCkaiLS4SqZGUU3fLf9/xRTItU6oE1Cjaivfy8I53x+O9+iVP8sH44GCADtCZIFiRGN2v0TzJrxQX2ZFev5FETNAlVkp/nQPPBB2/GL/4aXz84oef9do1zfTa5MdjNL+EhfFgwHBGZI4jgi4EkUlM5MPLwaCQ3vfd7HNEckU5k3fTKCJSnhNGSVwtv2zhz2kntkIlhCkaYf3dReKMs0VKI0XZ8kqBqV1kLolKePw7V9M05Y/dDADuC16wTrwfYB/vaUaVXiNxN4AbJos85wJOVDs3V28JjonoKQruUODA63XeyRN/4pTG7b7+QCQvBJz23XQJmpvJvxaSMgiKt/DdzHUGvllysW7h4FnWCgQMOWatGpjCUasGtiJC4nZ7ZxmmqY4vumxmuuCiyJrJbwQv8mbyXPC4aNvp1fvpnEN8t1h7TaMH0qJCJ/uMqTaXX/OcRpb8pvjyJSVvlcrvzlJanYO3XEUKKPinIFJ5oVOVphRLiRZcIArxKLDJT/RIVYIgwTd7QFAXgN/UpIRKBH80nbN0jSKjQyVYIZnwIoVCR0CdVBgKhCl8MRUkUun6CEEio+n8HRKlSQgLgvAKDhDfp0TrX1FsdAuSkhWoQHlxD45FueA5EYoS6TZyClXwAS+J2xs6xVCUwBJdUBPyqG0TD5Iz9CrLI/f/06WOlaOIZyemnNq9awX/DhD8jFv07wCZLNps1C2X1FOsQd3/V1hYdrcyNv+6fe9hTZHg8xqAS4/uEE4gCBIZGjgnhGOyrA+OEWjAMbQAjMmg7iCGPQix1JQAgM2f7giWPwihDCmI4XKwD4wTaUCy1KaTqcpbr+OppJrOqGIIobrK3gPRSYTRLDFooCm63XEMexBkoSmh89IFscdZafbwOWlKOEmzXnXACTQlaebXgvE0zijbwTT3GbIXWndg7xYMgpMNPWCn7RORu+e6ozqBIGJuaQG0sgVBugeR3dH81iUIee8xBHDhlkb2mu6OWd3sQUCZYkMNhv+puVQZTrcjxFzX29oEV3BDwlW5F7nLvJsuCZWF1c5b0BWkJPgCS3Ij0mDZATl9MggjBjclmOwu7Ii0uSPHAmcOE+61nP5G1g3EmEO4sYqoEsEfJfI62ndspXtaG5CF2O5tQ65eFCwyhfLTp6g0YOQ2cVgC7hsJe5fr356CbuX5ycq2z6SynIupWMpdcecsT9R5Eb1GEjzL1GI0TKC7kpPx+Ht5tCgbJN1SjEHbeHU8bFNnjxe0MdOh6I/RbcVU/oYxWeAiVXKIXp+gXbrh0e2OpVdmDP8aftxh3l7ZfAV2J4kq8qrdHAGHJj4NdkLonQtGlJknmukgE8ziVB++sO3mTmbtRLANmT2ro75KWJxzWiVKuY6FwOv/WAGN5B4cKW4hwy7EJj4F2CYYyuhnEhuGenD6T986rfH1WmdsflLWOb/yGGxNAefhkXPd4cZbh9YD1jc6zMDQas04xC3uZAq3iQnk2+Hf0Cqb0DJqPnqBQhdoRCXEychq29/3dPh6boeGPvwICi3ry4rvyQu8wuRWLdmONgZ52O4EHS88BiDqsg87rgCNh9U2NiFci+C5FZfurWGUfCVgu8UtwNeX3F56hGJoatMnXhvmM33DevtGqcKvo+shMqqz0y31dqBIeGVGCSql63GkfxGEAxq+mV0PJ8ESuB0QtrQ+P1nq4NzeyfMTHdFlPduFmP9x1Q8j57I/yE1PjKI3xPns/ex61gslhme2It2B3M3UCqFDelvyaZP7sFVz7vWhBKR8PQZMlG7F+WQSmWHqCJj9emL/3m2aXAIGW5Vv06M0VYmG1OncidTKs66737nCa1l3Kq/1lu4rupoweqZnMQ9krec5JMvV+ujZfrBM+/Bug98C/tyoakL39tDSCDc4ut7K1Pw5Hs8Jz1NS74DssMb1Z2amMzIUb2NlApUTl7KZs9OZZnY7OKm4zWcTt52BOF4zKqk4PRPshEPWhd10w0lbpiYgbz5R8bt5Roslm/HCxpxqLbTTcyqjQsrNLeipq+YHpS43bWjCt7MAx2xGBo3GmUd9aZf+aDnMzDt494gPWWKf7DXx8qXrxN2juAnMf4k7Ce/x3iTlvTSdUPUybRLZeg07If8JvSUHmfb0P33H3SY=</source>
+    <source>eJytWW1v2zYQ/uwC/Q/c4M12kcZdN+xD0nbJmqwt1mJBmw4D0qBgJNrmIokaSbn1tvz3HY+URFmiYi0NAjTivTx3vDvyeH3yU77K79+bP3hw/x55QJ5LRjWLydWGnK3yd1rIdB8J7xWTB+QN1Ro/T4DrgDx+NH/0w/zxo+9+xMVznprFg+8fk7M3ZmV+/979exlNmcppxMgvkqlVzNT1oVkvlLfy4fRzxHLNRaY+HEcRU+qEZZzF1fJhn0DOd+Mr9IplmkfUfO8k8lxki4RHmmfLdxp83knoLTC+5inXZo3FO3rxPlNFngsJ2w+oGgw93+Q9gG+ZEoWErfpwvATmHvrPheIZbOlL+O5hew5mL4Xc9LGINO3HAo6cZv06Mk2jfh3ZmklFb3H7NKU8MQHiyx6uX4Qs0h76CymKvId+JkVc9Jr77vXxmYAk6XP6nEfXrE+JqZ3TTPfu/rnIeeToL4q//07YS63zD88TXsfEW69SB1T8VTCl/VzySj6hSpGFkIRD1kmKyU4+cb0iUC61IQTKzAjYUl9xReDXcIgs2ZAItegV1UStRJHAEcJAodIUCg6PlJhLFulks0+Ok4Qcn70isvSMUMkIXUM46VXCEGDNKSqXLGFr0EHy4gr2mORS5ExqzlRlyxEcLtd0yUoDyRGFQgd/zGm1Yp+Mh/JaiYw8SfPI/X20NNmzH4n0mTuprAeo4x9Ygh+7Q+bnAcEaqy0u1yv6EUVw97Gm0kqUS3P7h3NiTA1NYRi2gVwBDYJyMgGwCKmwYwE8LMeBeCgTxENqNxyW2yAwlAhALQ2tG8hW3CAkKxKA0kgMYbniHQjnpIKIlt4TueqYHBq+SjAcw4olgO5ui2HITiiEaskhh/EoH4SHEgGwhaEF4mkO2mGxNBKhOBpasNjToeeKkwkXe9o8W+bHccqzLnS8QIm9QQeZ4N28ATNYzdHtuW3yiLtdB6E7mQBybqndqGUnREwrpAah+k1UAPrKY+nGh1aB2F5hEHbVYQSAVUKRHiqcI7zZM5psZRI2Dts6pdBwT8OFPY7KxmJnjQpOq6yVE5KvobBhf6hi72USOsxA2ASOUJLBpQ2b4PqHiN2yRTmVNHXYcLfm/Fe2CVFjAZmZ1VS9kuKTIl4f/ipb04THNnkL2XwrdAdgUWQRnsIfP0alH1NnyF6JObMirrcwP2MNXdTDZwgHG1RtgZDHcqnaCqqN84TdnpKnRME+Z3oxnayg+VMH8/k3an9RNm+m0ZmDvvn68aRfoQ066MuwczIf04uaq/yZmB5rQp4+IxeVnZM/JpdNTu+zE0wxXeRVgzs1PIZ6Y1jbOfLK5RxJGfR3MfasK5rFiYmstD1uRzm1U9WmxNiqaS2zLM4FrwujJFAp6ebfrIDudQzxon10sMXccqOaeiVEwmgG+amhO1rhIf0qi5IC3oeELwhEnhEF2KUnhCqSFonmIK/n4Gv60KCSyD4OH2p4HdYmSNhJmZGUf2Yx2tBKcf+V3CIG37ktzvDjtsV6y4v2llpy2zB1YdqrA7Nnt9pGwWQquFut4c5Xi527/ZQsaKJYXZCjEQRg2sU7s+TRWNjTAWQvJlVUMP/LusGOSZ+LNyX1BKyboo2zy0Oj5YYwgO3S+Ce8SKwyw+64/Xox9nEF5TK1Ds5m/kGCFeX0XUyQYXIJii3vYc3Y0Dku8NzYOkj2631uVKxLMMcNbzCTkW9bMQKde5UtjXreruYzq0K5Zx4qur14dy1isKO15qwaVDRds6hhpRWYOg0vwa3rtCqUHWNhEqYOp3msbGWQgjd/tCKlglaGmZ8IsoRMXpyeTw7aRC9NTEJ/jFkkYjZtXCwPny1NEjdNw8WfRbyZzvbwIJwdhqDPfnt3B+xcqDuBv78LdnEX6JPT16fnp/8fPWYJ0+x/GRCzBYUzrR/aVM+W7I137oAXmFvbkyg4bFp5hvXQqKmDgwjn0tNxw8Cb3m6hrPrufvBLNYLhEypUrju3e61+0VwCX7lbwDK3rwG7eaZ329WT6ddmFnfNNmaex9Jcb/a/noXuDN8EZ+YXMeEEdYUtaBjS+xAJbft2q9na3fn8jIk8YfWKKyE7rHMdMU71bHH5JlZNgBu1lf2zHcz18NtRWcWOn0F2O+5yzDgXq1l9R+wgS7Xk3QzLKbBcQTBv/FQJuIFVnz/12Kh2qlrrNveEq6hQyrubPY3VSKhU50ZIQRvsXMdx4wAo7CJOZkrvzEdfZFMvDdwQptsfN3DZ0lAOJpwGN8UIAvoTFCfijV2CYt4owElVw4OgTGNu4aT8cUdTEMpwBL9YhKO+19HIa7GQ6pbqih1huY5atRropb2u3/XlY1FouFdND22bZgg+o9jE4NsAnlBjc7KZzhrOH7jfbPNt2+mPqHDqKGWrP/J6baRcTMx/YU4uZ+Tbb0mT4N5iCoiV+Gg+X3AJ77eErVlSP+GI25XRqLL7Apt01HVoKY0ngu8OMqE/DrPGs48XG0qutp4fJbfHDgbanRSLbuu27HMqDkvqlo1b3K5c8L6ubPndWD/FUOyTycWlmUGUltV63R/uX/tPE2wI0l4Zcgtw495Uo1H5krG6DDWQ0vgu6Mpm95bfOZ9bUfFS2Kmss9HS6lQz310paNe9DOzxpJx+GS1dLpZa7lS0nYEwiHWwVdPpC4yM9Q1rFLntYuUYEsovJF46T+H3P3RRUT4=</source>
   </file>
-  <file path="Exceptions/AccessDeniedException.php" generated-path="Exceptions.AccessDeniedException.html" hash="bf8f83995026e0212e055c2ed3046d87" package="Default">
+  <file path="Exceptions\AccessDeniedException.php" generated-path="Exceptions.AccessDeniedException.html" hash="b0f0c44e9923c013b180c83cfd8dc7d5" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt</long-description>
@@ -307,9 +303,9 @@ attempts or that the account has reached the maximum number of agents</long-desc
         <inherited_from>\Freshdesk\Exceptions\ApiException</inherited_from>
       </method>
     </class>
-    <source>eJyNkk9vE0EMxe/7KXxDyiFFghNU0KqA1ANSJeDGxZl1MqPMP+zZJoD47ryZ0JRy4rDSjsfz83u2L99WX6eL1WqiFd2ocJOZNt/pztdPrWha9/gXE31FH7k1nC6mKXMSq+yEPqiYn8X2X98fndQWSrbX0wPv2jkxo3eSg8w90L/PXssh08FLpub/QtD13S2ptEWzEdPL5y9IVIuSK7Os8S4YhTwHB42Gp9zVDATvJDcQiwk5lRmnwNHoICq0GByFTIn3Ie+QD4zKt0UMT9gol0a8NF80/EBmK1RFt7B+Su2iHMc4GnHbIGaJ6JAMAU9TBjbADvGcUDHKvcQngmAGcM/V/rFeizaONBex/KyR53vp9VxRpNQC15C+xXQWOJLMmyjz+lEO2OXcmwdlw7qC1f2y890cgomPIS2J8pI2uC5b2nIAjmLZhdyrYs6Sahtyzyx2KJXbf+DGNAygzrrCmuwRocf9GOFTx8dOeTnQTWTdW8l0mar783+1SxC2diW9GWuHOJbptFOnlTozSY5N8ozbGs7B6ef0a/oNWWr95Q==</source>
+    <source>eJyNksFuFDEMhu8jzTv4VmkPW6RyggpaFZB6QKoE3Lh4E+8m2iQOdqa7gHh3PJl223LiMprYzuf/d3z5voY6Duer1TjACm6EsJGHzU+4C/VLY8nrnvimJG/gM7Y2H8/HYRwKZtKKjuCTkAZPuv/+8eiotshF384lj9hr50gVPlCJ5Hukf74G4UOBQ6ACLTzjwPXdLQi1SYoCwutXF0AiLODY09ruRYVYfHQmVu0qdlWdgTsqzZCsBE7I2yliUjiQEExq3mKBjPtYdlZvHKEfE6ldQYXCDXBqgSX+ssrGUEm2NoSldFblMKVlJLfN5EzJhkVdwsuazo1mCNBna5nontILRWbH6AGr/mO+sjRM4Jm0nDUIeE+9oWOxmspm3MRv7aUm80QFN4n8+kmPwfk0nkdp3bwYbHaMLsz2LJjxGPOUoUx5Y2newhaj4SDxLpbe1t6ccm1d8AmGznqV9h+8/iA6kzrtyjZmbzF4WpUlvsy9r1igA9wklL1ygctc3cP/1S6buLXj/O5hCy1je7Ws17JdJyzQsVHxlq3xFByH3+PwZxz+AjUA/xA=</source>
   </file>
-  <file path="Exceptions/ApiException.php" generated-path="Exceptions.ApiException.html" hash="114da2582646f685e32b7320f9a51acc" package="Default">
+  <file path="Exceptions\ApiException.php" generated-path="Exceptions.ApiException.html" hash="ca132d5167b01db166065ab3bde648dc" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt</long-description>
@@ -339,9 +335,9 @@ attempts or that the account has reached the maximum number of agents</long-desc
         </docblock>
       </method>
     </class>
-    <source>eJyNVm1P2zAQ/p5fcR+QVpB429ikFcaoukEnjQmVsk9IyDhHY5HYnu3QweC/75KmiUnzgr+kPl+ee57z5a5HX3Wkg92trQC2YGyQOQzh9hEuIn3plEl2MvuVRTOEc+Yc7XaDQLIErWYc4dSgjUK099ff/3LUTihpD4MgtQil4TDfnqVPTzFOnNOV6/UU/6Ronee6onKGEg2LKxQyZvZZZNRCwiJCCS7yCMDo4gcYdKmRFpiEyWx2AWiMMsBViOTMHAgr3zmImAzjpUxFGAaw5F5EOSFx92zuibC5maUuIsAsExEuYBwzc2+VhKNE8+L3yTxhIt7hKjnOk0V2a2GkRQlF4RzK0Hra/gUB0Mq1Z4tCCenQSBaXBs0MS6CeMdjA0mOpHkaco7XfUAoMS79nn8HziHSgdIKzbFvZx0rexYI7IeeXjkqhOlkFOUfKQPhLuVEcq4UfgGynKpWeZUoIP0UicrYY+s5X0qZaK0PVltHVboIsRLMez3MkcpQ3N3vUHq/fLBbhaxXFq7vLp05vSRFYkkOPu1TyPG08L/VBQzo3obiNfIm7wQaVmKYKQPhCx9vHc3TTwjLYzLzBX693diEcj6DCyF/PcpvaMZVlA0C2OKNoB3t7w/WjbBUXLakEG/QPSMNhK+Z+P2ZLdXTjfngDblNhdqMe9KOu1V034sd+xNYa70b+1I/cV/bdAT73B2j9gDuR99+QlJ4PsRP//RuYtzeLBuiXwPsZNMH57a4CeFnvsw/MrDXVtia8bCnaiAciS73AG1s12GkxiLIRVaBDHX7lOypm47ojzatCE4a1l1bNvoV6wXTZ+8qml3eu1/6Dzdyz6kEF7oaLhN0+9iQ256/iyqm9OZNy+tdQ4zpendBgzi+nRN2pq+ofcs1XUhN6c1OyaWzxNc11sXmjr0qOSFG5D4c+allQL8F/gZa00Q==</source>
+    <source>eJyNVm1P2zAQ/l6p/+E+IK0gUWBjk1YYo+oGTBpTVco+ISHjHI1F4ni2QweD/77LSxO3SUisSq3Pl+fueXK+6/FX5at+b29np9+DHZhoZBY9uHuCqa+ubKTDYXpwbVCP4JJZm2z3+r1+T7IQjWIc4Uyj8T00Dzff/3JUVkTSHCUusUEoTEfZ/jx+fg7wwlpVet/M8E+Mxrq+ZVLnKFGzoERKrOnJ3NfRUsLSRwnWdxKB8fQHaLSxlgaYhIv5fAqodaSBRx6SM7MgjHxnwWfSCzLKEWFowIJDEeeUaD6whUPGZHYWW58wE118XMIkYPrBRBKOQ8Xz36eLkIlgyKPwJJeOToyBsRIFGsW0KD3jUvyXSAC0MhmSRQGFtKglC0qLYpqFsCkgbGHpkgkBY87RmG8oBXqF44ubx8uY+KC0grNkW9onkbwPBLdCLq4sVUh5UkS5RJLC+xXZcRBESzcC2c6iWDqWGUH8FKFI80XPdb6WJlYq0lSFSb7KXiDzUNcEdDwpPdLPzp+Uk9lvFghvncfq2b38h4rviBUYokRf97HkqXY8vQWDGk23oXgt6RL3gy2qOUUFgfCFHHZPFmhnuWWwnfqDuza2Ziks96FESQESjWMzoUqtg0gWZxTwcH9/VHOWrPyVSyrKGh0GxOSoGfWgA2pDpbQgf+iCXFemLbiHHXArZdiC+bEDZmPRt2B/6oDddhNaQnzuEKLxWr+NfdBFmpbr+XaE912yb+4ideCvzv517RK7tec0QwfktbYXPzJd6bvNnTrvOUqLR8qbWsXarNsEn+WzK5lqeQyoBCm8x/lUrbrSkMv5oVd5bDUYmkisUs66ZNEe0w63/sRgO3N1WlWOvWV9YXZPXLaNipZZc2qFVsec/oBUsp6szmiypy+twB5WGXaYjk0vaoP17W2RVO1kqAiwyTydD05VUmp0KUYjF9gpOPr8B8FQuWM=</source>
   </file>
-  <file path="Exceptions/AuthenticationException.php" generated-path="Exceptions.AuthenticationException.html" hash="6a6d07459cebed470393092cedd034ba" package="Default">
+  <file path="Exceptions\AuthenticationException.php" generated-path="Exceptions.AuthenticationException.html" hash="f5a038ab1e8ab97bce03cd79a3a4d2cd" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt</long-description>
@@ -372,9 +368,9 @@ which indicates that the Authorization header is either missing or incorrect</lo
         <inherited_from>\Freshdesk\Exceptions\ApiException</inherited_from>
       </method>
     </class>
-    <source>eJxdUEtLAzEQvudXzHkprYWetGhLUfAgFNSblzE7bMI2D2ambFX87yZr7YK35HvNfLO+yy6bRdMYaGDHhEotvH/A3uVnTRzmFX8V4mt4QtXyWxgTMZBktAQPTOJakv7t/mQpq09Rbsxf3vaojqJ6i5WAi6RwlX5xnIYIQ9FAEU5hsN0/ApMeOQogrK6WQMyJZ9U1OG8d+NjWWJLiRB3tdVpi//k7zBG2xOAFyBeWIXgRHztIBYw2MZPV8yKb0qXHjqYNZYRxTByLOxpgd0DupWSvQ7bn96YL6A9zm8LteJuCi/wrfkkFOinFtvDZT8f4Mt/mB+J0hEQ=</source>
+    <source>eJxdkE9LAzEQxe+BfIc5L9JW8KRFW4qCB6Gg3ryM2WETtvnDTMpWxe9usq1b8ZbMe/Obmbe8SzZpNW8araCBDRNmauH9A7Y2PefIfjYKr0J8DU+Yc/3OtdIqoCdJaAgemMS2JP3b/cFQyi4GuamWX+x6ny2F7AxWDSZXFUfDi+U4BBiKC4r1TIT19hGY8p6DAMLV4hKIOfLF2DZYZyy40FYySWnFPPbXgZHd53GeJWyJwQmQKyqDdyIudBBLMZjITCZPu6zKTT12dF5TjnUcoWMIlgbY7JB7KfilT+b0XnUe3W5mor895VQUkX8BTGCgQ6bQFj25P6F8afWt1Q9GQoVI</source>
   </file>
-  <file path="Exceptions/ConflictingStateException.php" generated-path="Exceptions.ConflictingStateException.html" hash="67bc9d0fba5a32801a32e4e8ba1641d5" package="Default">
+  <file path="Exceptions\ConflictingStateException.php" generated-path="Exceptions.ConflictingStateException.html" hash="46383b5ac4ea282164d633b1b98fe777" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt</long-description>
@@ -406,9 +402,9 @@ an existing user, this code will be returned</long-description>
         <inherited_from>\Freshdesk\Exceptions\ApiException</inherited_from>
       </method>
     </class>
-    <source>eJxNUcFOwzAMvecrfJ6mjgMXYAKmiUkckCYNbly81FuitUkUu+omxL/jlKpbDlXqPD+/97x8SS6ZxWxmYAbrTChUw/4CW5d2EnNblfoXU36EDxTRv4UxAVvihJZgk4ldTXz6fjtbSuJj4Ccz8cVwaLwVH46wE6WGCaXPBfHpcuwD9I4CiLvhg9X2HTJJlwMDwv3dA9hYU6UdpHWOXdbx4lDAM+ypjLD/8hddqgcb+uADYNCvVV2ehUJxADEr2VUaF2kVbLRMZ2xTQ3PwB7jEDtQytUlA4hiOalFXglag9+IKO7Xom0kKNoqrL4DM0fpBxwAscwv4rDLK0E4znWuXthRjCmoa9TF6pnoM6FVjPuHxJjkeytiJU71lJ456WDeYTxwDLNtkx/vrsQirbGyfh7Vpnfl2J8NKJl6VpvnUDKvkr2v6MaDH/Jo/NJ+7gw==</source>
+    <source>eJxNUcFqwzAMvQfyDzqXkvawy7aytZQVdhgUut12cR21Nk1sYymkZezfJ7shSw4hkZ6e3ntavQYTymIxm5UFzGAbUTHWcLzB3oQD+9hWufFFGJ/gQzGn30VZlIVTLVJQGmEXkUyNdPl+u2oMbL2j5wQZab07NVazdWc4sGyAEZj6GfNpou8d9AYdsJmQwmb/DhG5i45AwcPyEbSvsZIJlDr5LooGNorBEhwxLdF3H4su1NmPNKwD5eStRZwlRpedgI/C9q+OkroKdlLGq2pDg3OwJ7j5DsQ7toGB/RCTiBFjrDRDb9kkemyVbUYtqhFcfQNF5LXNQjIwL07oqwhJWztJdy5jMpOsCappxMngGusxpLXkfVHnSX50r6uOjWhOBzLYw7ZR8ULewaoNevhen5O4Svv2ZbihdIimx8m3GalFn8RUE2yCndzrR6blKYvfsvgDB468oQ==</source>
   </file>
-  <file path="Exceptions/InvalidConfigurationException.php" generated-path="Exceptions.InvalidConfigurationException.html" hash="fa65455665ebc3f530cee70cf93fcecc" package="Default">
+  <file path="Exceptions\InvalidConfigurationException.php" generated-path="Exceptions.InvalidConfigurationException.html" hash="bd6d4e0f2c726fc6475605581d250c41" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -427,9 +423,9 @@ Time: 12:09 PM</long-description>
         <tag name="author" line="19" description="Matthew Clarkson" link="mailto:mpclarkson@gmail.com"/>
       </docblock>
     </class>
-    <source>eJxVj01PwzAMhu/5FT73sHYVQqJMMFRA2mHSJODGxaSmidomUeyxDcR/J632IS5R8th5Pxb3wQSVZ5mCDOpIKNTAxwE2JryIj8Ns5G9MsYI1ioyvx7RTQVnkxVVeFvPrkb3aIbF5WRU3sFknkivlcCAOqAmeI7FpiLv3p72mINY7vlUn15X7wt42UHv3adttxHEO5820MjkYy2BdY3WyZxCDkg6Ch80KdsjgvKSxFZu0vlMH7WMkLf3h+H+ZknTY0kWYJ4xbMT5O5QztoO4xdpz8F0PQx/uyHdD2M+2Hu6lZ4syn2P9Sn7WB9kKuYbg0Vj9K/f4Bsbd3SQ==</source>
+    <source>eJxVT8FKw0AQvQfyD3POoUmDCMailajQQyGg3nqZbsbskuxu2NnaVvHf3aRt1Msw897jzXuL+172cZQmSRxBAqUj9FTD9giV7F+8dXo2Em9MroA1ej+ej0FVQJ6l2VWaZ/PrEXxVOoDzvMhuoFoPUBpHcWRQE/coCJ4dsayJ283TQVDvlTV8O0gu71fmAztVQ2nNu2p2DgcJTOJBc/okFYMytRIhB4OX6MMgeKhWsEcGY32glVfB7TPUEdY5Er47Tg7LEKjFhn7N+YTjzkvrxqaS9lB26FoOIRa6F+d92WhU3UxYfXcuGRjmS/p/4Sd7oIMnUzNs/tT5Gsp/x9EPv4h4cQ==</source>
   </file>
-  <file path="Exceptions/MethodNotAllowedException.php" generated-path="Exceptions.MethodNotAllowedException.html" hash="d68fbc2ea9c15954503c1ec38923af4d" package="Default">
+  <file path="Exceptions\MethodNotAllowedException.php" generated-path="Exceptions.MethodNotAllowedException.html" hash="bc099068b54abcfabba038976824ab13" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt</long-description>
@@ -461,9 +457,9 @@ only GET and POST requests</long-description>
         <inherited_from>\Freshdesk\Exceptions\ApiException</inherited_from>
       </method>
     </class>
-    <source>eJxlUctOwzAQvPsr9txDgxBcoIJWVQscCpGa3ri4yaq24hdep2mF+Hc2UUgr4ZO9uzM7M549BxVENpkImMAyokxYwf4MuQrb5KOddvUdYXyAjUyJX5kQTlqkIEuEdURSFVL9uTqVGJL2jh6F+CPcYFK+gnefYGGMb5l7nON+N1Ko6FsHrUIHSV0xwiJ/g4ipiY5Awt3NPZS+wikjNA3NrwYpQUPM22Hb6N0BXosihyPGfWb79b2FtY+AJ2mDQZCuh+e7YqTwDjIZdHa8zZIua0wE6KrgtUvQamMGIayjZ+/ESPoHkZ1H6tZ5Z87wsip4VwX5x3bcRIPtOcdXywNe8uhxc9mw5NhnrbCFpZGxJlY3s6Ec7vODldpMS2+f+u/gOtEQNSc9BD3ysu3EXjiyoC/hfwvgI37EL+ArqKE=</source>
+    <source>eJxlUb1OwzAQ3iPlHW7u0CAEC1TQqmqBoRCpYWNxk1NtxbGNz2laId6dixullfBk6+779ezZSZcm2WSSJjCBpUcRsILdCXLptsH6ZhoHn4T+ATYihP6ZpUmaGNEgOVEirD2SrJDqr9WxRBeUNfTYr1yINxikreDdBlhobTvWGHf7hbhUSG87A51EA0Fe8cIifwOPofWGQMDdzT2UtsIpIxQNw+8WKUBLzNxjO2/NHl6LIocD+l3WRAPnMGvrAY+icRpBmIjPP4uRwxrIhFPZ4TYLqqwxEKCpnFUmQKe0HpywkUjfuxH0DyL6mBT1rNEneFkVLFZB/rEdpWiMPucia7HHSytn6Fy07NvH5iV2sNTC18QOZ40rh/t83wilp6VtnobP4QnR0DlXPjQ+UnP4wIm4OaeufuGH0XzS5DdN/gAQganM</source>
   </file>
-  <file path="Exceptions/NotFoundException.php" generated-path="Exceptions.NotFoundException.html" hash="a76261ede82e25cab33cc4ad68e2e242" package="Default">
+  <file path="Exceptions\NotFoundException.php" generated-path="Exceptions.NotFoundException.html" hash="508e92d13122cfa56a5ceaf6666ee922" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt</long-description>
@@ -495,9 +491,9 @@ invalid ID will return a HTTP 404 status code to let you know that no such ticke
         <inherited_from>\Freshdesk\Exceptions\ApiException</inherited_from>
       </method>
     </class>
-    <source>eJxNUcFOwkAQvfcr5kwMeOCkRCEgkUQNUbh5Wbcju+l2d92ZUojx350tFmx6aN+89+bNzOQ+mliMBoMCBjBPqBhL+DjC2sQ3DqkeZnxLmG7gWTHL36jwqkaKSiMsE5Ipkar3h4PGyDZ4ui2K3u8lMCxD40s4lwXOlY1JofXQGvTA5p8RzNYrSMhN8gQKxtdj0KHEoSgsgbynmoQ8axN+NUgsPM/Kisz6vXK2zH1Wi9HFugy11KXcybavTxASKN/zO8QyofscSuwEeFB1dHiVOTmWVs4BhxwhWdyj5GOrK2RoLRth5Y692WohqPBPeYX6uNmsu3mIFTfUjZXdnOiPoYHKh1aCKQYfgBptenM8WGL6W9xU9l6pHV42Sh2sGjYSOd/IYAtzp1JFwcOkjvrve7qT8d1Qh/quO6PgRPlG3YnOftKP0ZcEs2gvZ/suQJ7ip/gFpnS65A==</source>
+    <source>eJxNUcFOwkAQvTfpP8yZmOKBkxKFgEQSNUTh5mVtR3bTdrfuTCnE+O/OLlBoe9jOvPfm7bzxY6ObNBkOBmkCA5h5VIwFfB1gpZsPdr7OYmND6O/gVTGH32GaWFUjNSpHWHgkXSCVn0/7HBs2ztJ9moT3LPvmGBautQX0kFCPvbX2rrPQabTA+koOpqsleOTWWwIFo9sR5K7ATBiGQL5jT9z2XI8/LRILzrIyQjN2pypTxEHL+fCiXbhaANKPvM37CzgPyp4JsWKYsPrOxLkH3Ku6qfAmYIKvXFUVsAsevMEdikE2eYkMnWEtqDjyrLacS1kIR8eCfV6vV/FGxIpbihcLcpUIHFwLpXWdOFMM1gG1uT6r494QU7+8iSRQqi1e9krHumpZi+0QmMYOZpXyJTkL47rJT+fJVlZQZbmrH06ZSocohBWz6iVlKKMtCKaNucrvV1jypMlfmvwDeoa8Ag==</source>
   </file>
-  <file path="Exceptions/RateLimitExceededException.php" generated-path="Exceptions.RateLimitExceededException.html" hash="e37191ab6215442841e3ed1307951e90" package="Default">
+  <file path="Exceptions\RateLimitExceededException.php" generated-path="Exceptions.RateLimitExceededException.html" hash="03cd363bf95a4c15c3467759c15938bc" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt</long-description>
@@ -528,9 +524,9 @@ exhausted</long-description>
         <inherited_from>\Freshdesk\Exceptions\ApiException</inherited_from>
       </method>
     </class>
-    <source>eJxNkEtPwzAQhO/+FXvOIZUQF6CCVhVISCBVPG5ctvFSR4kf8m6UVoj/zjrQUJ/sGfnbmV3eJZfMoqoMVLDJhEIWdkfYuvQqMfu66O9M+RqeUURfCxPQEydsCB4ysbPE3cf9oaEkbQx8Y064F4XBU+tbgWKTJatycd5cjmOA0VEABHFnJFhvHyGTDDmwepcXV9BES7X+oV+vUPuJin0fS97PmOEYh3xGsdFjG8Ahw44olKF0cDiwzCFWWqHDPcF/9knGQZwCS11HI2x6zB3HAEufmr/7aq/0vm6iv502ojrz1Heqe2o7g3W2ULAM69TOovkyoMd8mx8LpH/8</source>
+    <source>eJxNkMtqwzAQRfcC/cOsvXAgdNM2NAmhhUILoY9dNxNrGhlbDzQyTij990pKmlir0b2aM3O1WHrtpZhVlRRQwSYQRlKwO8JW+/fogqmL8ckU7uAVY8zXmRQWDbHHhuApEGtF3H09HhrysXWW76W4Qt8SEl5a00bIL0iRynrxPnRwo4VRkwWEqCc4WG+fIVAcguXk3cxvoXGK6tRDJy9z+8LFvnd5728X4OiGMKEoZ7C1oJFhR2TLVDpoHDhO9lilKB3uCa4ZTjoOUSdoTq5phE2PoWNnYWF8c65X+zShrxtnHs6fkxzmkrvE/k99YacFIlnFsPbtRZTiJ7WnI8WvFH+xzoEA</source>
   </file>
-  <file path="Exceptions/UnsupportedAcceptHeaderException.php" generated-path="Exceptions.UnsupportedAcceptHeaderException.html" hash="ba604495ad1de442f0d8ef4c264accf3" package="Default">
+  <file path="Exceptions\UnsupportedAcceptHeaderException.php" generated-path="Exceptions.UnsupportedAcceptHeaderException.html" hash="eb4601676c44467d084693e11b39cfbe" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt</long-description>
@@ -561,9 +557,9 @@ When uploading files multipart/form-data is supported</long-description>
         <inherited_from>\Freshdesk\Exceptions\ApiException</inherited_from>
       </method>
     </class>
-    <source>eJxNkEFPAjEUhO/9FXMj2UTWg/GgRCFEowcjiRIvXB7tg1a6bdN2A8T4390uCPTUvky/NzOjx6CDqKtKoMI0MmVWWO4x0+Ej+9gMy3yeON7hjXLuXrVw1HAKJBnPkZNWnDaLp53kkI136V6If97cpTYEHwtzIosAL0yKI07yTlaUnzr6rcNWs0PWF2BMZq+InNvoEgg317eQXvEQ787uQSFYI6mA6u/kHcgpDKpFXQ1AkXFa38f4KvQ2WE/KuDVWxnJC09psAsVcr7q4V4oywaTzz6PBcZd3Q2s+O0/9mNqsfey70bzF1FLcFCOjJsjjfbxuyNih9M1DX183T+mym0M1h2ZOePAus1MJk2DObf0IdEf8ij8OB5OX</source>
+    <source>eJxNkEFLAzEQhe8L+x/mVliw60E8aNGWouhBLGjx4mVMpk1sNgkzWdoi/nc33bptckkyMy/vfZP7aGJZ1FVVFlDBnAkTafjaw8LEtxS4GR8KSyG+gRdMKV/rsvDYkERUBI9MYjTJ5vNhpygmG7zclkXe/7JLL22MgbP0TOUmeCLUxDCM5L5D77vhsPWwNeQhmTN5mC2egSm17AUQri6vQQVNY3j1bg8Yo7MKs1T9LcEDeg2j6rOuRoBMMBjo83xk+Ta6gNr6NaysI4GmdclG5FSvuuAXGhOCldPo4HHaBd/gmk72pX/HNpnAB06GtjB3yJtsZtJEdTxP1w1aN1ahuTui7Coi54x6RD2h4QegXSKvBWbRnlH76US6VRa/ZfEHrxKUqA==</source>
   </file>
-  <file path="Exceptions/UnsupportedContentTypeException.php" generated-path="Exceptions.UnsupportedContentTypeException.html" hash="79b02bcd83596c48e4e7d082ff3c6cb9" package="Default">
+  <file path="Exceptions\UnsupportedContentTypeException.php" generated-path="Exceptions.UnsupportedContentTypeException.html" hash="17047b82ed3fd6579a98767fc3359fcf" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt</long-description>
@@ -594,9 +590,9 @@ Only application/json is supported</long-description>
         <inherited_from>\Freshdesk\Exceptions\ApiException</inherited_from>
       </method>
     </class>
-    <source>eJxVkMFKxDAQhu95ijn30CLoRRfdpSh4EBfcvXmJ7bCpbZIhM6Ut4rublFprTsnPx5eZf/dAhlSRZQoyKANqwRo+JjgaehMfbJ7yM2O4hRctEl+Fctoik64QngKyqZHb98exQpLGO75T6td3dtwT+ZCcpXeCTuA0EcJKRyqBJxP84GAw6EDMxguH4zMElD44Bg3XVzdQ+RrzVSdJp4m6ptJJWIy2g4bBeYH183mJV9dN/8hP9i6hK7YMs4+rtfqymZLnWPdifJhrMDhA2enQJsXOUrXc9xermy6vvL2fm4o587aGZexUwmoHHGNWMxyo+SvmS0E86lv9AOqEjXE=</source>
+    <source>eJxVkMFOwzAMhu+R+g4+99AJaVxggk0VSBwQk9huXEJqLaVNYsWp2grx7jRdiUpySezfn+1/90iaMrHJ80xADqVHGbCCzxGOmt6D86aYE2dGfwevMoT43WTCSoNMUiE8e2RdITcfT4NCCrWzfJ+JeP+wZ8sdkfMRXTob0AY4jYSQKqJslp60d72FXqOFoFd0OBxfwGPovGWQsL25BeUqLBIwRKAkamslI3IzmBZqBusCpPbXbd5sO/6TfrGzUZt0aZ79tGMjL6tR+RqXXdDOz5Zo7KFspW8iZWdILe/9xci6LZQzD4trU4Z5bccyfDQjNQAcpljFcKB6ZdD3xJhOJn4y8QtIMo6C</source>
   </file>
-  <file path="Exceptions/ValidationException.php" generated-path="Exceptions.ValidationException.html" hash="8c58d04a3bc39562334d7dd0685933af" package="Default">
+  <file path="Exceptions\ValidationException.php" generated-path="Exceptions.ValidationException.html" hash="ca07600681c8c8faf1f342ca81457979" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt</long-description>
@@ -628,9 +624,9 @@ if it is missing, this status code is returned</long-description>
         <inherited_from>\Freshdesk\Exceptions\ApiException</inherited_from>
       </method>
     </class>
-    <source>eJxVUU1rAkEMve+vyFnK6qGnVlpFKvRQEPpxKpQ4k3WG3flwkkWl9L93ZrVqb8nLx3t5mT5GE6vxaFTBCBaJUEjD+gArE18lJFcX/J0p3cELiuRsXHl0xBEVwTIRG03cfj7tFUWxwfN99bfuAzursYBwLme8lN5MCjsPO0MexFwtgvnqGRJJnzwDwu1kAipoqvOEZXCEGS4DibY9scA66MM4h+kALMn6DeQ2HwTscbEKKZEquqHJ56DUsAwJaI8udnQz9BzPzmxiVUtykrDtbRZ1TUbpy2poLHUaJMCagMkLIEPEJBCaf8rQ68JqG7BSRDnLnPUVypyxoPQ83FaKx4tJn+yZZXdb3NDFNx5g7MVk9eUThnaw6DC1nO2duqhO8Wzj0Ha1Cu5heFbGma9ecd6YPRDymmEe7eU939VP9QvnlLTP</source>
+    <source>eJxVUctqw0AMvBv8DzqHkuTQUxvahtBAD4VAH6dCUXbl7GLvIyuZJJT+e9d2SNybpNFjZrR4jCaWxWwyKQuYwCoRCmnYnmBj4puE5KY98MGU7uAVRbp0VhYeHXFERbBOxEYT11/PR0VRbPB8XxbXpZ/YWI1dHS4dHdCD7yaFg4eDIQ9iRttguXmBRNImz4BwO5+DCpqmecIyOMJc7gYS7VtigW3Qp1kO0wlYkvU7yG0+CNhhsQopkerpQ5V1oUxhHRLQEV1s6KZvGvTnc2JVTXLmsG9tZjW+RunbaqgsNRokwJaAyQsgQ8QkEKp/1NDr/qytwEpHy1nmzLC7mTMWlJZ7dR04aCZ9segp21zjjq7u8VDHVkxW0H3F0AFWDaaas8sLF9U5fto5tM1UBfdwflxGmEc/uSzNTgh5zbCMdvSnn7L4LYs/lE610w==</source>
   </file>
-  <file path="Resources/AbstractResource.php" generated-path="Resources.AbstractResource.html" hash="4a8a60ea5a5e5ac3c227af8b7fda18a9" package="Default">
+  <file path="Resources\AbstractResource.php" generated-path="Resources.AbstractResource.html" hash="c0c7239970d92988d45ec72326680ff3" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matthew
@@ -650,9 +646,9 @@ Time: 8:20 AM</long-description>
         <tag name="package" line="21" description="Api\Resources"/>
       </docblock>
     </class>
-    <source>eJyNkk9rAjEQxe/7KeYgaIW6KqUUW6ti6U0orb0VJMbRDe5mlySrFPG7dxI36/+2OSj78jLzm5c89bIoC8J6PYA6DBUygzOYfsNblH2YVCUNq39qVB0YMWMiXFvhhWwdaLfC5l3YbrburTYWCWkPnXYTBiMSwiCQLEGdMY7wqlBHM9TLr3fUaa446scgyPXhziATpBUog6k2inED3k/ikc5jpjWsI8EjYHEMytcFISNUwsBcpUlxqi+kQSVZ7D6IaMkWCNRwj+OI2XF136xk2AQB0HKMdlGxFVO2UPm97+SE0P1nSqwoMqgwN+OlGh9GCbn4q0xqkNsbqqCcZSmZzqt5WOCpJPyc0zUWe94y9DsaGEhcl+Gd+CgpxRI7niO/BnfMmE9jwWGeS25EKmEyKTlqvtCNc25252hVTCT07TPtQLfIyMrbs9l2D1QDvUPwCVxmljm9iYqYwfjACoSdCMn2iUBfocmVBP1r/FduoRzSN6jZjl3X/HTGoo8zdHcW6PnJS8DOmdKAalilXzp4LRU/wz+e4Rk5hV27hlreim+8/QE4Minz</source>
+    <source>eJyNUlFrwjAQfhf8D/dQ0AmzKmMMN6fi2JswpnsbSIynDbZpSVJlyP77Lq2pOu1mKKX97svd993dUz8JkmrFbzSqFWjASCEzuID5F7wFycTEKmpmgQ+NqgtjZkyA2wx5IWIXOm2/ded3Wu37DJyKiMCHbqcFw7FF/GqlWpEsQp0wjvCqUAcL1OvPd9RxqjjqR8tI9XFsmIgMdaqGc20U4wbcJYueRnjItIZtIHgALAxBufQgZIBKGFiqOCruDYQ0qCQL8z/StmYrBCp8ELaXz05LuIoHKTsrFejkcu2hlBumbLoDcFQxQ/z8I1FiQ50Ej+1NX8w0MUrI1RXJYoPcDtBDuUhiol3M6cQDjyXZSTkN2gUL0sjFNDCQuC16esak/ikWWbuZjXKZv+Wm81BwWKaSGxFLmM0KPXWX7Can7vZX6XgmEPr2mWLQc22z+Pclp/lCa6C1BdeSMv0ypcXxxAKmR2QgB5GQ7KhDMFBoUiVB/zOV0ukUjl2Vui3byxScG95Xyyi9nAR914ZCZ/cMaULNr9GbLv7VIufmum09s0ADqJdrLmZ1UEDPDwy0LZg=</source>
   </file>
-  <file path="Resources/Agent.php" generated-path="Resources.Agent.html" hash="202691cd6b5663cdbd7113470bbf91bd" package="Default">
+  <file path="Resources\Agent.php" generated-path="Resources.Agent.html" hash="1b462575481f59886dc959d46857262d" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -725,45 +721,49 @@ Time: 2:32 PM</long-description>
           <type>array|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -890,9 +890,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\ViewTrait</inherited_from>
       </method>
     </class>
-    <source>eJylVE1v2zAMvftX8FDASZDOWTbskGxdgn7t0AxFm/aUi2KztVBb0iS6adD1v49S7CTbCqzGdLFE8pF84pM/fzW5iZJeL4IeHFsUhBks13CZm2vStnzn7TcO7QhmgsifTjhmBMNBMviYDAfvP3nbXJbeNvowhMsZG5IoUqJEZ0SKcGbR5Rm6h8UVOl3ZFN04iir3qmcxt0KSW0yLIuzG/wrcNP222FuJqzqy4Ty9R0Vg60i2BDq5dGCsfpScB0TKKRyQBsoRxG8AVyMmzPSBXTA1clc33ERaCEZv6uATocr4tHRkRUpNZPQcRcDL998w78MetT7s9+5DQ/9++XZx2xBwfqOlosY54T1aJYqt4VFY4PJS3demJHyZL2Hq53/Q5IAvECeBsIv/KtvkO0cKF5NW1nJksQZR8VmRTIOaAv4PzEQYud0bYUUJwlqx/qmqooCDHxXa9dZvkSqr9gK2HsqtXjlY7EZ++pSiIakVKyiM7QSVxGxrfiPUyLaIHWU+twQfa3VXyJR4ItfEd9YS/l3Tma5UW5JXXOlClpK8DbPWl3SjXGWMtjxjJsC6pvnatO19hpTrjBmw6vXqf3rw4zb0DUWGtmWWW1HI7NXB1S+jWvJ44K5Sqfc1Su8ERdZq5afipdkNgOcNnFet3QPiP8rhEau+0z08ssgQR534/HQe9xtn8+g6cYlxtx/S9evs3XHI+BJFL78A9+HjSg==</source>
+    <source>eJylVEtv2kAQviPxH+aAZECkpmnVA7QpKK8eShURkhOXxZ7Eq9i7291xCEr73zvrB05UpMbqioPn9c188+DzV5OYbiccDrsdGMKpRUEYw2YHV4m5Jm2zd4XhxqGdwEIQFeIZe03geByOP4bH4/efCuVKZl45+XAMVwuvCbudbkeJDJ0REcKFRZfE6B7WS3Q6txG6qffI3UHbemWFJLeep2nxNf2nZ1n9G51vJW5r16YB83tUBLZy9qqSWiIdGKsfJYOBiBjHAWmgBEG8CnH7mBmTfmAjzI1s0ld9iVLBCGU2fCJUMUsbR1ZEtNxnf/alAT/Ppe7DCF7wHMFrHt655OKfLxz3pQFnMVoq2ltnLKBVIm00j8IClyHVfa0Lyw9mTxj55ejVOPAFgrCg74JD2feol0hFq6LcWvZOdyBylhXJqFi3AuOvqJkwshGMsCIDYa3Y/VJ5mkLvZ4521zhYpNyqFx6NiRKrtw7WzTqcP0VoSGrF+1VM8wyVxHivfmuska1DGuYst40+1eoulRHxfK6Je9c2/oemC52r1kSXnOu7zCR5HcbtO3WjXG6Mtjxu5sALT6udaV3+AinRMZPgY9Db/6rCj93QNxQx2rYwtyKV8eH51deSb3hMcJeryFvrze8X21mtLp+PX9NBGfFcIfCrNrlH/K9zdMJX0B8cnVjkIEf94PJ8FYxqY32K/SDDYDAqAEcV/mBaQv7udvj3Bzc25iI=</source>
   </file>
-  <file path="Resources/BusinessHour.php" generated-path="Resources.BusinessHour.html" hash="b8ca3722b645af301b7e7e820ea175d3" package="Default">
+  <file path="Resources\BusinessHour.php" generated-path="Resources.BusinessHour.html" hash="aabd1a1ffe0b31018c557afc8b74f83b" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -912,45 +912,49 @@ Time: 2:32 PM</long-description>
         <tag name="package" line="20" description="Api\Resources"/>
         <tag name="inherited_from" description="\Freshdesk\Resources\AbstractResource" refers="\Freshdesk\Resources\AbstractResource" link="/classes/Freshdesk.Resources.AbstractResource.html"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -1025,9 +1029,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\ViewTrait</inherited_from>
       </method>
     </class>
-    <source>eJyFkU9LxDAQxe/5FHMQForYWsVDV3GrIl4WFt31VJA0HbZh+ydk0lURv7uZ0qx7EMyl6Zv3ZuZHrm9NbUQcRQIiuLcoHVZQfsKqNi+ut+0Z6xtCm8FSOsd/D96TQZrEyWWcJudXrK11y1p2kcJq6YVYiE62SEYqhEeLVFdIu+IZqR+sQpqLgf4sFGsrtaMib5rx9q/xVeP75AwYdwPpDongyVvBTgmujKvWmsDYfq99Q5BKsdP14GqEMiTr4yT5GCcXnmYntwi50b+LjLSqkT4VBo9z8cNhVxHkJTkrlQsB8SUE+MNcgfIUjjG4OqLw4YXxsAr4lqbXnZuKwbPYSwt+ju62B8m70HaymYR4/Hpwh4of+SS0ghuYxYH8jclpNhff4gc9dqpL</source>
+    <source>eJyFUk1LxDAQvRf6H+YgLBSxtYqHqrhVES8Ly7p6KkiaDtuw/QiZdFXE/26SbroKgjklb96beW/I1Y2sZRjEURQGEMGdQqaxgvIDlrV80r1qT1zhmVBlsGBau+e9YWWQJnFyHqfJ6YUD16K1YHaWwnJhkTgMwqBjLZJkHOFBIdUV0rZYIfWD4kiXYTDQn5VirZjQVORN427/M18EvnnqIdHtQKJDIng0bFB7kSuNpmtBIFW/E6YrMM4tV/ega4TSa+ufWrI6p52bWFu2QcilOPjZJ+cNM0o/3k3Hd41dRZCXpBXjejW5+bSWwRyb0Uc+ht+RbH2MZY+1jpMpMI1lLzrtqxNrvmMKzDzRbQ6YIaLqWOOReLyYPWjk9gMc+X5wDbPYL+LVLoJmxs1XGHwDARCr6w==</source>
   </file>
-  <file path="Resources/Category.php" generated-path="Resources.Category.html" hash="16b96621f7c86cdf87fdad9672fefe4a" package="Default">
+  <file path="Resources\Category.php" generated-path="Resources.Category.html" hash="39359d4c0acbf5aae4e4dc215c33d60b" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -1050,45 +1054,49 @@ Time: 2:32 PM</long-description>
         <tag name="package" line="23" description="Api\Resources"/>
         <tag name="inherited_from" description="\Freshdesk\Resources\AbstractResource" refers="\Freshdesk\Resources\AbstractResource" link="/classes/Freshdesk.Resources.AbstractResource.html"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -1327,9 +1335,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\DeleteTrait</inherited_from>
       </method>
     </class>
-    <source>eJyNkkFPwkAQhe/7K+ZgQkIaF9F4QI0QCDcSouCJy7Id6Ya2u9nZosT4352tLUJCIntp982b15kvfXx2mROy2xXQhbFHFTCF9R7mmXsN1hfXUV8S+gHMVAjxNmHPAPo92buT/d7NfdQWpoja4LYP8xkLUohSFUhOaYSpR8pSpO3qBclWXiM9iIrOFlYLr0yg1SjP67d/jb8zX+adYI6XepcuvTj3zeBH42xRTq2vCtAcsbF+D75p4VKNKzMEztud4UBQmrMIgoWQIbyf76SmdchIt2qDMHLmb5Iauc4Vx4zbTvwMWKYEozUFr3RozeJLCOATl2oxJ3DEMYHDQgkccUjgBGAdUq8bT1wKD9MCf9lZU4am2HqGLKEvVX4QdsoDz2fKzalV1k9mFFDHf/KqTYQn6MjUkK6IjC1JNqgMUoeH+hY/vWbuHA==</source>
+    <source>eJyNUtFqwjAUfS/0H+7DQJCyODf20G1MUXwTxKlPvsT0zgbbJuSmbjL270taW90QZp6Sc889Ofckz6861WHAut0wgC6MDHKLCWwOMEv1m1Umv60KS0ITw5RbWx3HjhVDv8d6D6zfu3uswIXMPRjf92E29QgLgzAoeI6kuUCYGKQ0Qdqt50iqNALpKQxKulhZLwyXltbDLKt2/zNr71eSx5jh1eSlTq5XXkn8aKinYCfKlDkIJ7NV5gDm2OVrdXapJNBG7aVTBS6cIIFVYFOE98u91DYPXLw7vkUYankydHwBkXEnNWq68dNikRAMN2QNF3beOvnyfsEtP2ATewRnsUbQDhfBWSgR/I6zlqlH98uPh61vcPdrJQvbVFvWwIFoCp6dkD034IzKYvuXzeqNy8yi8H/2ptGFF+iwRJIoiaQqiB2jk0idyt13GPwAB9Tv/Q==</source>
   </file>
-  <file path="Resources/Comment.php" generated-path="Resources.Comment.html" hash="e1c7d344ed0e3c9f243148a5b403fc10" package="Default">
+  <file path="Resources\Comment.php" generated-path="Resources.Comment.html" hash="7e2cffebf584b231839208cb17e3905a" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -1644,9 +1652,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\DeleteTrait</inherited_from>
       </method>
     </class>
-    <source>eJztVktT2zAQvvtX7CEzASZgSjs9hPLI8GgP0DIQOOUi5AVrsCVVkoEM5b93pciGZJIJHnroAR2SaLWPbz/tZ+fbns51kq6tJbAGBwaZwwyux3CW6wunTLnh7ZcWTR9OmXN+d0g+fdjaTDe/pFubn75621CU3tb/vAVnp2RIk0SyEq1mHOHYoM0ztHejc7SqMhztdpJUdu7JaGiYcHZ0iAU6DJvtZb6XOmNv9b0S+BA9m7ZVWaJ0YKIv2UJPubCgjboXlAkYpyQWnAKXI/CZEBtj9qnhO3aLMNDipXYghBeM4uta+OhQZhYG19YZxl3tmzwlCdDyXTRQe/Cqwx5MURO8QyN+edRIILXgDTagQloJ6aJL7bl/zwxQdSFvGxN5oZGsiIY0fBMHDrkfjE6dCnagm2bC8spaoaRNIyG2Ox/RjTJVaf8lJHFPhEAntGqPFsGaHM8BNRl1Gy4zgluESTPDyogKOiJrDgy6ysiWFN5UkjvCBtPIVygxoZdVUayGiKdJPK1YJjjsTFxgjzqn8Vzfnem/v8C+Qbx06ZOSbIfEz7OMTBMDLA4RcUO/A0OzvDAtZjjylV4TNLEyY9gYOjTAbJa6cPTHd9ScuNyoBwujFwkfPXLUnjI7GgQRHqIUmDXmN4Zq0TaiouGQTnDm9y2DD5S8KQTdtLy9cERoy/Cfyh2rSrZt8pwqnYhSOG/DrDVJl9JWWitDg0oN0BPKDce6LfZTdLnKqINBUaiH92Dw163dD2QZmpZZrlghsrkXFwVZXRd+vGs18jD2XoW91wO7SIsTkZECVlbXdw3+rtC6le7Zr4thtzdfgkHgXobxkbTaixWW6PFEWFe/biwprFbmO9VIiM34Q44fcvw/5ciKYkqLYVyXvB/na/L70XJJNn9eSJS+Qi8WbLT5nPwF+0mf0Q==</source>
+    <source>eJztVktP20AQvkfKf5hDpAAKmNKqh1AeEY9ygBZB4JTLYg94hb273VkDEe1/76xfeZAIrHKphBVF3tl5fPPtfLa/7ZnYtFvB2lq7BWtwYFE4jOBmDOexuXTaphv5xhWh7cOZcC5fHrJXH7Y2g80vwdbmp6+5cShTb+x/3oLzM28J2q12S4kUyYgQ4dgixRHS/egCSWc2RNr2Hhkt3BsNrZCORoeYoMN8sf2q85WJxJudryU+Vq5THOg0ReXAlu7eWPQXSwJj9YPkdCBCzkTgNLgYIZwLojpqn3u/F3cIAyMnEEp6wkRwjqoiPjlUEcHghpwVobuoETx7gMCX76iG3YOpdnswS1ThXzTlL48fGa6RYY0SuJzRUrnKp/bdfxAWGIVUdxMbO6JVIqksQXHDlDgM/dh0qnywA90gkhRmRFIrCkp+qLsU2a22WUrvDk0+MEHQyfumo2Xwiu3F4ApNUH7MJcjl2IywIi3RQUdGkx2LLrOqOae3mQodg4TZFlY4ObehsiRZLUKeyxR8lbVyl53CCfaYBB7g9d05KvpL7BtMUZf/Ocl2kfnPAnbmWAJRThgTxfc5XS9JEkbOM+YrztBVmIW1YgwdHnLxgsl877fvbbLlYqsfCUYT0R89hWg8fzQa5Io9RCUxqs1vjTWycUjGE6OcDIVfN40+0Oo2kXzy6u7SMbNN439od6wz1bjRC651KlPpvA2j5kxdKcqM0ZZnl3vgB5objk1j+GfoYh1xE4Mk0Y//hMIfu3EnKCK0TdNci0RGi8+vEmp2k/h5r1Qa5jrw6uxNT+9yjRbiY0msrK7vWvyVIbmV7vnPy2G3t1iaufS9PMun1mqvrPEWnZ5KctXbilh2lWLfQaUM3Y4/ZPoh0/9ApiJJZjSaz+6r79PFWv1+9LpU6+8fFquv0StLTmmWf38B3a6k/w==</source>
   </file>
-  <file path="Resources/Company.php" generated-path="Resources.Company.html" hash="49c686479d28c2f0b01e7778491df185" package="Default">
+  <file path="Resources\Company.php" generated-path="Resources.Company.html" hash="64febe7a256b6618d01d16587bb90937" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -1721,45 +1729,49 @@ Time: 2:32 PM</long-description>
           <type>array|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -1998,9 +2010,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\DeleteTrait</inherited_from>
       </method>
     </class>
-    <source>eJylVF1v2jAUfc+vuA9IQJUOxqo9wNYVlXZ7KFPVQp+QJpNcGquJ7dk3hajrf991CKHrKo1ofklyfO7X8XE+fTGJCXpHRwEcwblFQRjDsoDrxNySttk7j88d2iFMBZH/mjBnCIN+r3/SG/Tff/TYTGYeG34YwPWUgV4QKJGhMyJCuLTokhjdw+IGnc5thG4UBLl7c2cxs0KSW4zTtHwb/Yu4bfow7gRTPJQ7N/HBee8kritmraXOjFAF2IrLWClUIh0Yqx8lZwIRcRIHpCF6RXcV/4wVfBD3CGMj93VLhaNUcOyuDm4IVexgvHRkRUQ7bvAUBMDLT7DTNIQXooVQdx/Ci6FD+EOtMkk5m19+EKybBa5stFRUbe44ZwyhVSKtgUdhgfuT6r6CeuWTBSGMvPVau1TwGdq9rSoSXfvvBq6ko30HK4lp7F7XF0bW70ZYkYGwVhS/VJ6m0PqZoy3qfYuUWwWZ3GBcEuodSqxeO1jsDXCxidCQ1Ip9Wh7hBLnLuIYPDDWyaUROCSqSkfDfDYPPtVqlMiIW/5b4lBuGf9d0qXPVdMgbrnQlM0kew7ixSHPlcmO0ZXPwAOxxmhWmae9TpETHPAHfAL3+nx78cRv6hiJG2zDLnUhl/ObBVZcgX/LxwCpXkd+rLN0pHVuZlS+Fd2a35D9to3lV1m0R/1yOT9n0ne7xqUUOcdRpf72YtcP6MhU/tnkZ8qnCKnN3VGZ7DoLn3xDPCUw=</source>
+    <source>eJylVE1v2zAMvQfIf+AhQNLCXbpu2CHdugb9WA/NULRJTwEGxWZqobakSXRTo9t/H+XPbCuwGBNysCjykXx8zMfPJjb93nh/v9+DfTizKAgjWOVwE5s70jZ9UzwsHNoJzARRcT1nrwkcHY4P34+PDt9+KIxzmXrj5N0R3My8Zdzv9XtKpOiMCBEuLbo4Qve4vEWnMxuiO/YemXv1bTm3QpJbTpOk+Dr+p2dZ/Y7O55jgzs4LE+2OfC9xU7tuUatTI1QOtnL3xpK2WDowVj9JhgMRMpID0hD+EeCaiFOm81E8IEyNbNNXjIeJ4Pg6Gz4TqsjBdOXIipBum+wvvjjg47upOQ5gi8MAmk4C2GIggN+5K2HKPv3xLWFTNnB+o6Wi+rXxOmUjWiWS1vIkLHChUj3UtnH5wfwQhl6agxoPPsFwXJIk0Q1fLeRaOmorWUtMIvd3HcLI9mKEFSkIa0X+Q2VJAoPvGdq8dbBImVWQymeMCo/2iWKrNw6WrTgunkM0JLViHReTPUeuNmrMu8Ya2TkkoxgVyVD4e9foM63WiQyJJ3FHPPiu8V81XepMdW70lnNdy1SSt2HUnamFcpkx2rJUuAcWP81z07n8GVKsI26CF0Nv/qsKP3ZDVygitF1h7kUio9fnV+9FtuIxwTpToX+tJD4q5Fspl/fEq3SvDHipAPhUQh4Q/wEdnPASjPYOTixykKPR8MvFfBg0G5Z/K5HZ5MGCCnvvuIT72e/x7xdzkQw+</source>
   </file>
-  <file path="Resources/Contact.php" generated-path="Resources.Contact.html" hash="75384326c61ee75111bde7c8aa07d929" package="Default">
+  <file path="Resources\Contact.php" generated-path="Resources.Contact.html" hash="8c8cd61ad716b3650f983a8f387c0220" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -2138,45 +2150,49 @@ authorised to view the contact fields</long-description>
           <type>array|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -2415,9 +2431,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\DeleteTrait</inherited_from>
       </method>
     </class>
-    <source>eJztVk1P20AQvedXzCESCTIJBNQDtJSoQIsEVQSBExLaeCd4Fdu73V0nRC3/vTPO2kCgaqKeKuFL4tn5fPvmyR8/m8Q0upubDdiELxaFRwmjOQwSc+W1zTpsv3Zo9+FCeM9vx+SzD73t7vZet7e984FtQ5WxbX+3B4MLMnQbjVxk6IyIEU4tukSim9xeotOFjdEdNBqFe/PkdmiF8u62n6blv4O/OS6aXs33GFNc1ffayJXz3iicBc+AZQmnzr2IPdjgHswDq6eK8oCIKYUDr8EnCPGStwvuR4ThRNwj9I16qlxiHKeC4qsy+OAxlw76I+ctGSrfxs8G0MMjVKBG8Ay1COr2I3g2dQQv4CqTlMPxQ1dOPVe9AhU2WuU+HFY+R1NhgbpR+X1tIi+0uUiDoVv+Gqs9xsy9ZpUKPsFGN4DiNl7XP1fO16CNFabSLVXnDgk4SjVLNE0fW5T0pkTqoNUfnMEE56AtI2OZrV1DcM60lW0QFmGE1DYfSr6iTEyQ7kkRvhQZizQFl+gipW3BqqAofKKtChFTQvXFzb7Z5JEwqv5vhBUZFbdi/isvqETzR4F2Xp9b9IXNnznUJz6xeubg9omkJw8xGq90TrtUEu0Yc4WyNq8YatS6EQQCoxwLfl8zmLg8TlXsCfkrT0RcM/y79qe6yNcd8pIqnatMebYRR9aNv85dYYy2xF9eRpp+ODfr9n6BRB5JE9CS6tm/9MDXbfw3FBLtmlluRKrkmxcX9rQY0fXAuMhjPguUbpWEDGSlvWVmtkv/hfTwE6jb5BXaOiTSt9pbhxYpxPnWxteT4Ub0tO93i7xk4lRRyNw+KLM9vpICAn2K1oOoV430Q4PIF+u/tHEEMe5XLzudUiaquKwgUUnEFDkYM6FSEFJalmmVk1YQorzaozKCa9Kqv6jVqRL3OnA2hjnJI+s8kZLzkuanJLxyTnCIOGGdoOKZeFBZkdGs2Yjy6/EilYvKU5abgBPMFGnCmLuaKZ/At+FwAGgtaVisJcLe9m5VfrezkvxFtfjRBBKeBHCGpICraN+S6MVrXUUQPFb7ppLPOlbyXRPfNfH/1ETelj6zuEWcjmAFbeRvHjriFeiQCHKCu3IPqs+eVQU0HFafUC1O3P6DiD7+BlxSAJ0=</source>
+    <source>eJztVl1P20gUfUfiP9wHJBLkJhSqPkC3S7S020qliiD0CamaeG7qEbbHOzNOiLr733uuP4FSNVHfVrXykJn7OWfOPfarP4uk2N0ZHxzs7tAB/eVYBdY0X9M0Ka6CddmoMlx7did0oUKolufwOqGjw/Hhi/HR4fOX1ebMZLJ5cnxE0wvZGe/u7O7kKmNfqJjprWOfaPa3N5fsbeli9qfiUfonbTczp0zwN5M0rf6d/tSz7n5D53NOeWPn60JvnvmT4VXr2kFbw2vzoOJArgnpDFNnlwbZSMVI5ClYCglT/MjfdwFnQPRWfWGaFKbvoAE9ThVytMX4LnCuPU3mPjhsXHbFv8IfjxynBTmieyBG1B0lonsQRPQQvDpNfVB5QAU03zZNqF5Yk4fW2nmdLZUjNGXyL/0eHNnlKm13xvWfwtnAsXBzr81Hf9D+uIHI7z/ZxwfjQ4fiwnCq/XddSK9AEvlWiQUUsWONlVGpp8Fk+p5ueU3WCUxOyDwugO7KOj0k5ZjmjPbFqOXWMnXLuDoDuBEZqzQln9gyxUhxV1GVIbHONCFLYPzgtn/Q55kqTL8olFMZGnBq/W9eoszePyW7de/gOJQuv+fRm0Li7MrTTc/hN3cxF8HYHONWMfCcc8O62940tjBbhwALQTtWst42GhxfpCYOuIKrAHpuG//Rhre2zLc+6CVqfTCZCbIHumyd4Dr3ZVFYB0LLnAKB2brYuv0LBpE0DoHxtatf6kKuvQjvWGl226b5pFKjn76/dnrLOa6JFmUei7Wh+KAiZ8NcTLOwdFgHNNIkT0PkPZmqZ68xBIPhs9eOEeTDYP/vN7P9qNeBz3VmbEmyqMk9PK3T/feURgD/JbtAqhtAaIslldeq8N0cAm4+6VbPR5WAtKFZCcFJ1JIlnjNlUlJaO9F0k0NFgK7M/LyKkLLQgAflRl3moxG9X9AaGipvBbBUEuMNkUKg9RqwqDgRBUH1TN2ZrMxw5myOAnZR5/JRZRUlavCilYFULKStlQkJvZvNpsTOQd5iq5leHB539Y9HG0lj1AkjzqCpF8cVQx030cVHehhveR+NFMoLYc/oez0b/Vsuf8vl/0EuZXomwukBGB7RRrIpn0kwykiMoI+S4nM1F/2X0qbq2hjb766BpB7+UGHx+wZO0AU5</source>
   </file>
-  <file path="Resources/Conversation.php" generated-path="Resources.Conversation.html" hash="143b455fa42ce18b54dd1ec6d0656d1e" package="Default">
+  <file path="Resources\Conversation.php" generated-path="Resources.Conversation.html" hash="0e1352a8b48094087dd95934b5eb56b0" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -2668,9 +2684,9 @@ Time: 2:32 PM</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\DeleteTrait</inherited_from>
       </method>
     </class>
-    <source>eJztVE1P20AQvftXzCFSCAokpVUPoXxEDaiHpkUQesplsYd4hbO73R0HIuC/d3btmBASgVWphwofEntmZ+a9mXn75cikJupsb0ewDV8tCsIEruZwlpoL0na66+2XDm0PhoLIfw34TA/2up3up85e98NnbxvJqbf1Pu7B2ZANnShSYorOiBjh1KJLE3Q343N0Orcxuv0oyt1az3hkhSQ3HmCGhOFj/7WzlyYR1dmKjFYztE6Q1ApsGcKOADeVDozVM8kJQcScywFpoBRBTFBRFeDKiGNmcsMu6Bv5BCAwjTPB0c/K4R2hShz0rxxZEdMiILqPIuDH81kC3YZnbMORwMI/Hi1WeIDzGi0VLZzH/I5WiawyzIQFLivVpDR1wj/TJYz9eBuLHHAAzU68BNw111cnGd8gbQSxufQLeAsscsbkoVEkdifLgErbGijFfrowphLSi3YYYcW0BAENmVQOi5Rb9UZ4i1Zd5yoOE10BusWZGazKs6wVQu6LBPyUdcKBg+IIHDFTXrmdw1W+vU2OXW5Ek385zX5I/bjajQWFczTZ3C+vKEGuDkUYudIdX2C5NYVVWCvm0OCtFKtNC64HT6XyUGr1rYPxkyxP7mI0YYvG/aCoASqJSWV+Y6iRdSNy3gfF3MMK1wxm2V5nkmesJhfEy1Uz/IemU52ruiTPudJ3OZXkbZjUbtKlcrkx2vKKMgG+a2g0N3WxD5FSnTCDfpbp27/B4Mdt6BuKBG3NLL9EJpO1gyulmF/xeJ50aP22e/W1l/d1kwYLbbEAtlo7hxZ/5+hoq3n282LUbG9QXlC2V1+o1Gy1ywqvqLC4mliDiq8OuNb2XY7vcvz/5ei3/Z+o0RdaI8bHP53Ve+M=</source>
+    <source>eJztVEtP20AQvkfKf5hDpAAKhNKqh1AeUQH1UFqUR0+5LPaAVzi7291xIKL9751dO3YgSYtVqZdiIRTP8/tm5vOHE5OYZqO7s9NswA58tCgIY7iew1VihqTtdC84xg5tDy4FUXg946geHOx39991D/bfvA/GkZx6Y+/tAVxdeku32Wg2lJiiMyJCuLDokhjd3WSATmc2QnfoIzK31jcZWSHJTc4wRcLwcvjH4LGJRRW8REyrGVonSGoFtsjynhx5Ih0Yq2eSq4KIuKAD0kAJgrhFRWWKK3NOmdMdO6FvZIWjoB2lgis8aYoPhCp20L92ZEVEgxLEowcK/HhuSwQ68JR6HpQz8o/HjSUy4OpGS0Wl95Rf0CqRVpaZsMDtpbpd2Lr5DyZPGPnVtxZ14Aja3WiJgmtvBEEyukPajOV3CFZxlpjkjGcBrby6O18GVtjWQ8rP2IX9FdBWp2OEFdMCC7RkXHksUmbVy2EuRneTqSjs+hngLa7OoFWWptt5zmNRg5+iWQg5yoPghDnzSe4eP2fe2+TY45G0+T+XOcxr/1wzmJLLAE069xcuCqyrixJGPp+Vb/RkULlZWCvm0OK7FSszDL4fnlTlosTqeweTSsbnDxGacGKTfhDfGSqJcWl+aa6RtVMyvhHFMwgXXjebBX6TSt65uh0SX1zd/C+aLnSmahMdcK/PcirJ2zCuP6mxcpkx2vLVMgf+MNFobmrDv0RKdMwk+mmq7/8KhV+7oU8oYrR1y3wTqYzX728h0eya11Tp0/rz96rsLB/vZm3mmmNFbG3vHlv8nqGjrfbV1+Go3dmgyKB5r8rQq73dKXq8RJ3554u1qfjLAjfavsr0Vab/oUz9+f8jlfpWbp1K+e8XDpuBXQ==</source>
   </file>
-  <file path="Resources/EmailConfig.php" generated-path="Resources.EmailConfig.html" hash="86d7686497207fd4df42b00589509299" package="Default">
+  <file path="Resources\EmailConfig.php" generated-path="Resources.EmailConfig.html" hash="7d86f7cd26f40629ae005aaabe4b545b" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -2690,45 +2706,49 @@ Time: 2:32 PM</long-description>
         <tag name="package" line="20" description="Api\Resources"/>
         <tag name="inherited_from" description="\Freshdesk\Resources\AbstractResource" refers="\Freshdesk\Resources\AbstractResource" link="/classes/Freshdesk.Resources.AbstractResource.html"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -2803,9 +2823,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\ViewTrait</inherited_from>
       </method>
     </class>
-    <source>eJyFUcFKxDAUvOcr3kFYKGJrFQ9dxS2r3haKrnsqSDZ9tmHbJuRlV0X8d19Kqx4WDISm82amM+n1rW2siKNIQARLh9JjBdsPKBr75I3rzgL+TOgyWEnvw9sdczJIkzi5jNPk/Cpga90FLLtIoVgxEAvRyw7JSoXw4JCaCmlXPiKZvVNIc7Gno4Ny7aT2VOZtO5z+JW40vo3MqcZ9J3ULS9O/6hrcKAiDsAtnDpqtQCp2IfAGfIPHNcSCoFlwjZ2sEXKrfxMMNVUr2WRQj2J899hXBPmWvJPKT3zxKQTwCn2mdqfwN36YDhXC4jvlWFMSYEtrdO/H4cRZHKQD/o7u6x+IWeh62Y5APDytMx5V+LknkxXcwCzGkPxFDdFpNhdf4hubWKWD</source>
+    <source>eJyFUdFKwzAUfS/0H+6DMChiaxUfquLK1LdBmZtPA8nSaxvWNiE3m4r47yZZuyIMzENJzjn39Jzk7kHVKgziKAoDiGCmkRksYfMFRa1ejNTthSdWhDqDOTPGHx+tKoM0iZPrOE0ubzy4FK0Ds6sUirlD4jAIg461SIpxhGeNVJdI2/UCSe40R7oNgx2dZNZLzYShdd40fve/8lXgxyAdGz21TDQwk927qED3M57xn0LLvbB+wLi1IjASTI2np8hN+Kmp7bNlFUKuxBikr8wbZo28Q2+Anwa7kiDfkNGMm8UxxreLCna5bkPVc/hbxfGHOm7Ze7YBh0xgjZUUnRnYo2q6Zxrs/0RXjZgVou5YMyDxYaO0NMjdw58NfnAPkxhdiTfuW9DEhvkJg18RXqcj</source>
   </file>
-  <file path="Resources/Forum.php" generated-path="Resources.Forum.html" hash="af87f8c3c8b4e1c27f387bc7e316e1fa" package="Default">
+  <file path="Resources\Forum.php" generated-path="Resources.Forum.html" hash="1e8fde7cf9e25d5a45527338f88d962e" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -2887,45 +2907,49 @@ Time: 2:32 PM</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -3280,9 +3304,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\MonitorTrait</inherited_from>
       </method>
     </class>
-    <source>eJy1VN9v2jAQfs9fcQ9IQJWSjk17oOsvlaJNGhtqoU+8uMmVWA22ZzulqOv/vnNiUkpBI5qWh0DO391999mfv5ypVAXRwUEAB3CpkVlM4G4Jo1TdWKnnHRefGNQ9GDJr3VefMD3oHkVHn6Lu0YfPLjbmcxfrfezCaEiBKAgEm6NRLEYYaDRpguZheo1G5jpGcxwEudm6Mh1rxq2ZXmRZ8e/4b8A+ZmhxP+xQCk5T7QeeqITtW/iW48IjvZhOlYHU+Ry0B/vgSMtHTlWAxVTAgJVgU4T7N1jjweck4AObIVwo/tq1EDjOGGWXLfDJokgMXNwZq1lsV8jgOQiAHsd+JWgIFdkQ1mYMYU3JEN5K5YoUr2I499Cer1ibijYQCyW5sB6zgp4/Mg1EjYtZFSIUasEyH4iKX6WlxdidwcaqFJxAM0q4iXNjuBQmKns2j4NthP4Hk5gkmkm9vNrFyAM4bmNVmsoUm7yqVLGDFk0DsYMQIy9ne5OzYprNwdGcoYYGT6oVjTbXYs+B+CO1h/tcxJZow+ZYLSpMo4k8y0oGz2U+Pb5NATgpIXAGDZtyc3j6Tp7ezpUOCdekNxUqz9TLplxvVQPmfeFUYhXjzqZATPH3YhV0x+uqf0s2UExrtoQGeYBtSlos/XaTVis21XJhYPp6D1w9xaicmHRfFW7uo+CYVOE9UxWvm5HTaRKW02T0XTP5Uor7jMfuwN1YkqZm+g9pBzIXdYe8pk7f+ZxbF8OktkgTYXKlpCZH0gB03dnxUtXlPkSbyoQmoMtQLv6Fg9tuZb8iS1DXrHLLMp5s3Thv1PyOtmfNp4UVnDvD9QO7y6Ol9cgRrfbhqcZfORrbao5+3oyb4S5juuLt0NetnPkS/AHaEJ/+</source>
+    <source>eJy1VMtu2zAQvBvwP+zBgJ1AidK06MFpXsgDLVC3RuLk5AsjbSwiMsmSqyRG2n/vUi+7fqAWigqGIS2Hy5khh59OTWLarXB3t92CXbiwKAhjeJjBMDG3pO10Px+4c2j7MBBE+eclo/pweBAefAgPD959zIsjOfXF/vtDGA58JWy32i0lpuiMiBCuLbokRvc0vkGnMxuhO/KIzK0dG4+skOTG52mavx39FXmJKRJuCR5oJVnflug7E4utW99LfKmgtbe5RdfaZlOw5YS6PLT6WXIvEBG3cUAaKEF4/APtavgZ2/kkJgjnRs5XLx2PUsEdioXwlVDFDs4fHFkR0U298JtnBvx4KZXDAdTMA1hQHMCCswEsOee7FP+FUv/wYaj4u1oAMBejpaIKVIPPnoUFpijVZF5jIFol0qoSFi/GasLIH9JO1Q+OoRvG0kWZc1IrFxYLd48qkcvE/hujiC2baDu72sSsBEjcwK4IoMu3v2pWs4QeC4PIQ5hXae/OKncjrJiCZztBCx0Zz4csUmbV9srkM5OAx0xFxPxhWV+Pm7NGlaVpyeOtbMFPuVYOOS5AcAodSqTbO1lxqr9xZJ897PI/NyqP26811i1ZCKKMj7dM1MT3V90SRq6xLqc9WtyFL/EyTFgrZtDhnIgVh/Oxn17zfIgSq18cjOdXx9VrhMY7y9dcHv1LVBLjurztXCMbT8n4iCmSLI+/m86+0OoxlZE/hrfEBjWd/03Ttc5UY6E3vNZXOZXkaxg3d+pOucwYbTmtrIFvRxrNTGP6A6RExyyCb0798k8s/LYb+owiRtu0zb1IZbx+/6oAZw+8TQv5zbPhUxssnt7N2S0iyRHp7eydWPyRoaNed/j9dtQNNgXWt98Jys7zxPLvNxtJpBE=</source>
   </file>
-  <file path="Resources/Group.php" generated-path="Resources.Group.html" hash="031e99bcbc8b3f6f091111c8f8a10220" package="Default">
+  <file path="Resources\Group.php" generated-path="Resources.Group.html" hash="e684e24e366a9f50581a996f7b290010" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -3305,45 +3329,49 @@ Time: 2:32 PM</long-description>
         <tag name="package" line="25" description="Api\Resources"/>
         <tag name="inherited_from" description="\Freshdesk\Resources\AbstractResource" refers="\Freshdesk\Resources\AbstractResource" link="/classes/Freshdesk.Resources.AbstractResource.html"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -3582,9 +3610,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\DeleteTrait</inherited_from>
       </method>
     </class>
-    <source>eJyNkkFPwkAQhe/7K+ZgQkIai2g8FI0QiZ5IiIInLks7oRtKdzOzoMb4350tW4TERPbS9u3XN29fe/fgSqfSbldBFx4JtccClp8wLd2rt7S5DPqckTKYaO/D01iYDPq9tHeT9ntXt0GbmU3Qsus+TCcipErVeoPsdI7wRMhlgbxevCDbLeXIA6W2/OfOYkbaeF6Mqqq5G/wH7kOfx46xwnPZuSvO9n0z+B7J2GUo5Zns1gFFOIpTsjsjLqBzMWDwFnyJsDphOcJD6W+tVwgjZ36nNv3mlZa39yPww2NdMIyW7EnnviXVl1IgK6Rv+0zgqLAEDskTODpwAidNNSbNucKSry2BtTMgQ501tY96uz3caQJJYurVQRIKqdZVFNLm6sh6zMMfd9FawT100qYM7sjg7x8oqdsF</source>
+    <source>eJyNkkFrwkAQhe+B/Ic5FAQJjU1LD9pSQ6U9CWK1Jy9rMiSLMbvMrLal9L93d2OiQqHuafPmy5uZxz486VKHQdzvhwH04ZlQGMxh/QWzUr8ZRdtrX1gy0hCmwhj/ObHUEJJBPLiLk8HNvRcXcuvE4W0Cs6lT4jAIg1pskbXIEF4IucyRN6s5stpRhjxyxI7/rK0WJKThVVpV/jb6l2ymvxCeYIUXw0udX+78LvGjRbtofUKvpHYa6PBDJ89I7aX1ApFZGwajwJQIxRnNHT62aW5EgZBqeex+CDyrhHVoGuGnwTpnSNdsSGRm3jX+dpOBPW6VNuAITgKMoFsjgpP1IzgPrrFplnTHPgM7utASbGutZG3aQgeM94LATiTr4qhZEKkWVavEzUWTMpi5J3nV+sEj9GKfDff8AD9h8AsgP9z9</source>
   </file>
-  <file path="Resources/Product.php" generated-path="Resources.Product.html" hash="a5e790dd03f02466fcf419d5b7914e7c" package="Default">
+  <file path="Resources\Product.php" generated-path="Resources.Product.html" hash="2f32a00f558170b055831ae0dbb98840" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -3604,45 +3632,49 @@ Time: 2:32 PM</long-description>
         <tag name="package" line="18" description="Api\Resources"/>
         <tag name="inherited_from" description="\Freshdesk\Resources\AbstractResource" refers="\Freshdesk\Resources\AbstractResource" link="/classes/Freshdesk.Resources.AbstractResource.html"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -3717,9 +3749,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\ViewTrait</inherited_from>
       </method>
     </class>
-    <source>eJyFkU9PxCAQxe98ijmYbNIYqdV42NW4zaq3TRpd99QLS8eWbAuEof6J8bsLtV01MXEuwHuP4QdcXtvGMp4kDBJYORQeK9i9QdHYB29cdxL1R0I3h7XwPq5uQmYOWcrTc56lpxdR26guavOzDIp1EDhjWnRIVkiEO4fUVEj78h7J9E4iLVhPfxrlxgnlqczbdpj9G9wqfBmT0zVuO6FaWBn9pGpw44ZgRG8ZiPaiRsit+m42EMtWEEHhTNVLD/jqUVcE+Y68E9JPWfbOGISKWBPkMfykiO5AEis8TYMHCAgtrVHaj+aUWT4LB+EcpeuDFFLotGh/R/kwWmc8yvhVR1NHuIIZt1/wNFuwD/YJ9j2Rew==</source>
+    <source>eJyFUU1LxDAQvRfyH+YgLBQxtYqHqrhl1dtCWXc99ZJtxzZsP0Im9QPxv5u02xZFcE6T917evElu7lSpmMd9n3ngw0qjMJjD/gOSUj2ZVtdnPbEj1BGshTH98d6qIggDHlzyMDi/6sGtrB0YXYSQrB3Cmce8RtRISmQIjxqpzJEO6Qap7XSGdM28jv5k0q0W0lAaV1Xf/a98lvg2SueNHmohK1i1zYssQB/vOKZnlzbYQRQIsZKz4zF7VgkiSHSbd5kBfDfY5ATxnowWmdlMXp9uHthyAce8p/Azj+OHTK7sY5U4xQFrrFrZmJGdVMtXocHOk00xY1aIuhHVbzUfGqVbg5n7xZPRF25hwdWwCC1sni/mfQPYepMO</source>
   </file>
-  <file path="Resources/SLAPolicy.php" generated-path="Resources.SLAPolicy.html" hash="2137602d90a19c7490f8504bd771169b" package="Default">
+  <file path="Resources\SLAPolicy.php" generated-path="Resources.SLAPolicy.html" hash="17f8fd6f3d29d6add0ea6b6cf529d3bc" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -3739,45 +3771,49 @@ Time: 2:32 PM</long-description>
         <tag name="package" line="20" description="Api\Resources"/>
         <tag name="inherited_from" description="\Freshdesk\Resources\AbstractResource" refers="\Freshdesk\Resources\AbstractResource" link="/classes/Freshdesk.Resources.AbstractResource.html"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -3852,9 +3888,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\ViewTrait</inherited_from>
       </method>
     </class>
-    <source>eJyFUU1LxDAQvedXzEFYKGJqFQ9dxS2KJxeKu3pakGw6bMO2TchkVxfxvzuprR8gmEuSN++9mZdcXrvaCZkkAhK48agCVrA+QFm7RbC+PYn4I6HPYa5CiLdb5uSQpTI9l1l6ehGxpWkjlp9lUM4ZkEJ0qkVySiPceaS6QtquHpDszmukqdjRn4XV0isTaFU0TX/6l/hk8GVgjjEW9wWUtjH6AH6gMxwrpbd7wz6gNFsQBAuhxl7gfgtoUMw4wVZtEApnvpv3CXWj2IK1Qy98DdhVBMWaglc6jGzxJgTwikHGWMfwc+5Y7WePix+TRxrnALZ01nRhKI6c2V554D6m23xBzELfqWYAZL87bwPq+KtHoxVcwURSo54/M0+m4l18AIxQoZg=</source>
+    <source>eJyFUV1LwzAUfS/0P9wHYVDE1io+VMUVxScHZR8+FSTLLmtY14TcbDrE/+5N164MBPOUnHPuyTnJw5OpTBjEURQGEMGzReFwBcsDFJWZOW23Vy2xILQZTIRz7fGFVRmkSZzcxmlyfdeCc7X1YHaTQjHxSBwGYdCILZIREuHVIlUrpE05RdI7K5Huw2BHfzLl3ArlqMzrut39r3xX+NlLh0aztxwKXSt5ANtNeLzlCqv3is1ASPYhcBpche2IOR+h08yYq2zEGiE3asjQtZW1YBue727EL4fNiiBfkrNCuukpwbfPCLx8qb7jJZx38Pyxh1/8wByuTwRsbLRqXM+eVOO9sMD3qWY9YCxE24i6R+LjxljtUPofv+j94BFGMdXi4/gEI07yEwa/yEmjOA==</source>
   </file>
-  <file path="Resources/Ticket.php" generated-path="Resources.Ticket.html" hash="b2949d864dc5438fb2de38567964ecbc" package="Default">
+  <file path="Resources\Ticket.php" generated-path="Resources.Ticket.html" hash="ed4c977be521995d9b3b124ecd31508a" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -3867,68 +3903,70 @@ Time: 2:32 PM</long-description>
     <namespace-alias name="DeleteTrait">\Freshdesk\Resources\Traits\DeleteTrait</namespace-alias>
     <namespace-alias name="UpdateTrait">\Freshdesk\Resources\Traits\UpdateTrait</namespace-alias>
     <namespace-alias name="ViewTrait">\Freshdesk\Resources\Traits\ViewTrait</namespace-alias>
-    <class final="false" abstract="false" namespace="Freshdesk\Resources" line="24" package="Api\Resources">
+    <namespace-alias name="CreateWithAttachmentsTrait">\Freshdesk\Resources\Traits\CreateWithAttachmentsTrait</namespace-alias>
+    <namespace-alias name="UpdateWithAttachmentsTrait">\Freshdesk\Resources\Traits\UpdateWithAttachmentsTrait</namespace-alias>
+    <class final="false" abstract="false" namespace="Freshdesk\Resources" line="26" package="Api\Resources">
       <extends>\Freshdesk\Resources\AbstractResource</extends>
       <name>Ticket</name>
       <full_name>\Freshdesk\Resources\Ticket</full_name>
-      <docblock line="24">
+      <docblock line="26">
         <description>Ticket resource</description>
         <long-description>Provides access to ticket resources</long-description>
-        <tag name="package" line="24" description="Api\Resources"/>
+        <tag name="package" line="26" description="Api\Resources"/>
         <tag name="inherited_from" description="\Freshdesk\Resources\AbstractResource" refers="\Freshdesk\Resources\AbstractResource" link="/classes/Freshdesk.Resources.AbstractResource.html"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="Freshdesk\Resources" line="34" package="Api\Resources">
+      <property static="false" visibility="protected" namespace="Freshdesk\Resources" line="36" package="Api\Resources">
         <name>$endpoint</name>
         <full_name>\Freshdesk\Resources\Ticket::endpoint</full_name>
         <default>'/tickets'</default>
-        <docblock line="34">
+        <docblock line="36">
           <description>The resource endpoint</description>
           <long-description></long-description>
-          <tag name="var" line="34" description="" type="string" variable="">
+          <tag name="var" line="36" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="55" package="Api\Resources">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="57" package="Api\Resources">
         <name>restore</name>
         <full_name>\Freshdesk\Resources\Ticket::restore()</full_name>
-        <docblock line="55">
+        <docblock line="57">
           <description>Restore a ticket</description>
           <long-description>Restores a previously deleted ticket</long-description>
-          <tag name="api" line="55" description=""/>
-          <tag name="param" line="55" description="" type="" variable="$id"/>
-          <tag name="return" line="55" description="" type="mixed|null">
+          <tag name="api" line="57" description=""/>
+          <tag name="param" line="57" description="" type="" variable="$id"/>
+          <tag name="return" line="57" description="" type="mixed|null">
             <type>mixed</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="55" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="throws" line="57" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="55" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="57" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="55" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="57" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="55" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="57" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="55" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="57" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="55" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="57" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="55" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="57" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="55" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="57" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="55" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="57" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="55" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="57" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -3938,49 +3976,49 @@ Time: 2:32 PM</long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="81" package="Api\Resources">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="83" package="Api\Resources">
         <name>fields</name>
         <full_name>\Freshdesk\Resources\Ticket::fields()</full_name>
-        <docblock line="81">
+        <docblock line="83">
           <description>List ticket fields</description>
           <long-description>The agent whose credentials (API key or username/password) are being used to make this API call should be
 authorised to view the ticket fields</long-description>
-          <tag name="param" line="81" description="" type="array|null" variable="$query">
+          <tag name="param" line="83" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="81" description="" type="mixed|null">
+          <tag name="return" line="83" description="" type="mixed|null">
             <type>mixed</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="81" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="throws" line="83" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="81" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="83" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="81" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="83" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="81" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="83" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="81" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="83" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="81" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="83" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="81" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="83" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="81" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="83" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="81" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="83" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="81" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="83" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -3990,51 +4028,51 @@ authorised to view the ticket fields</long-description>
           <type>array|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="103" package="Api\Resources">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="105" package="Api\Resources">
         <name>conversations</name>
         <full_name>\Freshdesk\Resources\Ticket::conversations()</full_name>
-        <docblock line="103">
+        <docblock line="105">
           <description>List conversations associated with a ticket</description>
           <long-description></long-description>
-          <tag name="param" line="103" description="&lt;p&gt;The ticket id&lt;/p&gt;" type="integer" variable="$id">
+          <tag name="param" line="105" description="&lt;p&gt;The ticket id&lt;/p&gt;" type="integer" variable="$id">
             <type>integer</type>
           </tag>
-          <tag name="param" line="103" description="" type="array|null" variable="$query">
+          <tag name="param" line="105" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="103" description="" type="mixed|null">
+          <tag name="return" line="105" description="" type="mixed|null">
             <type>mixed</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="103" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="throws" line="105" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="103" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="105" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="103" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="105" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="103" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="105" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="103" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="105" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="103" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="105" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="103" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="105" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="103" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="105" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="103" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="105" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="103" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="105" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -4049,51 +4087,51 @@ authorised to view the ticket fields</long-description>
           <type>array|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="127" package="Api\Resources">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="129" package="Api\Resources">
         <name>timeEntries</name>
         <full_name>\Freshdesk\Resources\Ticket::timeEntries()</full_name>
-        <docblock line="127">
+        <docblock line="129">
           <description>List time entries associated with a ticket</description>
           <long-description></long-description>
-          <tag name="param" line="127" description="&lt;p&gt;The ticket id&lt;/p&gt;" type="integer" variable="$id">
+          <tag name="param" line="129" description="&lt;p&gt;The ticket id&lt;/p&gt;" type="integer" variable="$id">
             <type>integer</type>
           </tag>
-          <tag name="param" line="127" description="" type="array|null" variable="$query">
+          <tag name="param" line="129" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="127" description="" type="mixed|null">
+          <tag name="return" line="129" description="" type="mixed|null">
             <type>mixed</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="127" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="throws" line="129" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="127" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="129" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="127" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="129" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="127" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="129" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="127" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="129" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="127" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="129" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="127" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="129" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="127" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="129" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="127" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="129" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="127" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="129" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -4108,45 +4146,49 @@ authorised to view the ticket fields</long-description>
           <type>array|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -4384,10 +4426,122 @@ See Freshdesk's documentation for details.</long-description>
         </argument>
         <inherited_from>\Freshdesk\Resources\Traits\DeleteTrait</inherited_from>
       </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="50" package="Freshdesk\Resources\Traits">
+        <name>createWithAttachments</name>
+        <full_name>\Freshdesk\Resources\Traits\CreateWithAttachmentsTrait::createWithAttachments()</full_name>
+        <docblock line="50">
+          <description>Create a resource with attachments</description>
+          <long-description>Create a resource with the supplied data</long-description>
+          <tag name="api" line="50" description=""/>
+          <tag name="param" line="50" description="&lt;p&gt;The data&lt;/p&gt;" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="50" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+            <type>\Freshdesk\Exceptions\AccessDeniedException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+            <type>\Freshdesk\Exceptions\ApiException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+            <type>\Freshdesk\Exceptions\AuthenticationException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+            <type>\Freshdesk\Exceptions\ConflictingStateException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+            <type>\Freshdesk\Exceptions\NotFoundException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+            <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+            <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+            <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+            <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+            <type>\Freshdesk\Exceptions\ValidationException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Freshdesk\Resources\Traits\CreateWithAttachmentsTrait</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources" line="51" package="Freshdesk\Resources\Traits">
+        <name>updateWithAttachments</name>
+        <full_name>\Freshdesk\Resources\Traits\UpdateWithAttachmentsTrait::updateWithAttachments()</full_name>
+        <docblock line="51">
+          <description>Update a resource with attachments</description>
+          <long-description>Updates the resources for the given $id with the supplied data/.</long-description>
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="&lt;p&gt;The resource id&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="51" description="&lt;p&gt;The data&lt;/p&gt;" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+            <type>\Freshdesk\Exceptions\AccessDeniedException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
+            <type>\Freshdesk\Exceptions\ApiException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+            <type>\Freshdesk\Exceptions\AuthenticationException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+            <type>\Freshdesk\Exceptions\ConflictingStateException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
+            <type>\Freshdesk\Exceptions\NotFoundException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+            <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+            <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+            <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+            <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
+            <type>\Freshdesk\Exceptions\ValidationException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Freshdesk\Resources\Traits\UpdateWithAttachmentsTrait</inherited_from>
+      </method>
     </class>
-    <source>eJztl19PGzEMwN/vU/gBqS0qlLFpD7AxKmB/JJgqaHmqhNKL4aJeL1mSa6kY3332NVdoQay3adKm9V7aOrbjOP7Z13cfTGKi1uZmBJtwZFF4lDCYQicxF17b0TbLew7tHpwJ7/nXMenswe5Oa+dNa3fn1VuWddWIZXuvd6FzRoJWFGVihM6IGOGjRZdIdMP+OTqd2xjdfhTl7tmVftcK5V2/nabFt/2fKc6CXk33GFNcVbdn5Mp+LxVOgmaZy66Kh+jBBlUSsbRj9ViRDxAxmTvwGvyioguah5S6obhBaBv1sGGR2jgVZBo2wFuPmXTQHjhvRexL1eguioAejrzMZRMeJasJ86ib8OiwTVjIUuGkOBM/dK4E57EC7Wy0ynxYLHUOx8IChaOymyBqFZ/Gao8xV9hGaQnvodaapcDVnu5Gp6EqRBAhTaV8aZ3ySc5xrHTu0inI4gBy0WYenDBq/t0IK0awoeRcYtHnNoORukX5PcvTdL7iE6snDvoPdXByG6PxSmdUrsV9HmOmUM7FK5oaVdUi9wlmdDrBvysaH+nsOlWxp8u58HTpFc2/av9R51nVQ57TTqdqpDzLUFZOUi9zuTHa0rXSAajkfXdqqsZ+hj7Rkk5AQOjJ78TA1238ZxQSbUUvlyJV8tmLC5DkA7oeuM6zmNcYNi7xOhVpo1C4m6nTwxQRQLQC24RR0Cwx4idU84ZPlNs6oMqvN7YOLH7LSbVe6/S6tWa5WBJZZ6+Nxn7h4/4JkafK+bJnXStMpVviixsE9S1Ce5Joaj6xpeumYhWpg3q78wWGOAVtuTFZnhEtQ91soq1sgCDSB0iFyYuSm+NIDBE4PmDLWKQpuETnKc0oLDcURIO2KliMqamRBb4YY+BeWCumBeSwQSmx03UXWHeBv7MLzMq4XlRsKFYinytzuSm8jPynE0a+HLlXM7ckYU/N4Phl9mOdjdG6Inaau87pWBVvjRPlk+VBvQQcD3zuVt0HPh+N3jWUayj/KSgXUOAB3YQVAF2a2gtOVp/dM5Cfnd1VaPb0x41e4+ldHdcwr2H+j2FmEk5mIPwqyuziKsD0J0m+/wHTFPLb</source>
+    <source>eJztV0tPG0EMvkfKf/ABiQQFQmnVA7SUiEdbCaoIAr1EQpNdw46yuzOdmU2IaP977X0GCCXbqgekrHLIemyPx/b3efbDJx3oZqO7sdFswAYcGhQOfRjNoB/oC6dMtJUuXFo0u3AmnEtfj0hrF3a2u9vvujvbb96nwoGMWLj7dgf6ZyzpNhvNRiwitFp4CCcGbeCjHQ/P0arEeGj3WCOxC9eGAyOks8NeGKb/9l7UzKJfUvkIQ1xa+VL7y3u+kjitFfF36YKec8ILIoydrRXTM7ZVSQfSG6MDk5uzLJX3jZpI8gzCI6cWnAL3UNWWugdUv7G4RehpWQWSl9gLBZnn2+Cdw9i30BtZZ4Tnzstt7zkooIePVdS0A3M160CZuQ7MZbwDc7UqLBadu7B6Nie8fZYXfig3AZanBYpbKxm7YrXUOpgIA3QcGd8Wsm72Rxvl0GPArBXW8BHWu1ki7frCTSklhCsEkee7XHisQaWhHXAiVWLDGfhpEvxHVlWUQsvqRQsjIliTfiUy6BITQyTv0P8ZJ2FYLbnAqKmFYdVtx3ceaidVTPhL++MIY4l+KV7WVsvaJokLqGrSE/xe1/pQxTeh9BzV6sJRK9S1/6bciUri2gc9p71OZSQdy9Cvn6nL2CZaK0MVpjMQiNxgpmuHf4YuUD4dggCmpv8UBZdduy8ofDR13VyJUPqL61cgJxlRmeAmiT1eZRRyy7eoY9uZxn1uQQ+Di3BFa7BF6Mp1K3Txk3f3mguk3dwnLLTam/sGfySk3FrvXw7WO8ViAdUW+2239zInvxZh9VRaV9DijcTQt09wxxxC1EjInwaKqM0zVH7qXxFaaPX6X2GMM1CGac/wLOxqosupMn4bBLHACKlVedFnBo7EGIGjBLb0RBiCDVQS0kTGckdBCFFG5iYT4kwywRfCzBlBGCNmKfphjXJjZit+WPHDK+CHrKtbafvmnUuMwF36lC7+TAWfj5kKihl9nTkmCfvq5K5f5gRPxRM0Nj0DzWlrlSfTm/OU7h5PRvtjFPI9gdlsUMF2flKvoLqC6uuF6gNo8EDvwFKwfTTlH7ipM+szgC+c9XVR7uiLlr4L6OqPK5CvQL4CeQlyRsZxBoy/hzg7uc7h9b8RTr/fEQI9cw==</source>
   </file>
-  <file path="Resources/TimeEntry.php" generated-path="Resources.TimeEntry.html" hash="8d8ac6a43672726185a8074f2e439bd2" package="Default">
+  <file path="Resources\TimeEntry.php" generated-path="Resources.TimeEntry.html" hash="b016f66ced5b005932e9028523cad404" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -4754,9 +4908,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\DeleteTrait</inherited_from>
       </method>
     </class>
-    <source>eJztVktPGzEQvu+vmEOkEBRYSlEPoTwiCO0B2ggSTpEqszskFhvbtb1ARPnvHTvOa5UobMuBQ3xI5PE8vvk83+5+PVEDFcXb2xFsw5lGZjGFuxG0B+rGSj3cdfauQd2AK2at252TTwP29+K9g3h/79MXZ+vwobM1Pu9D+4oMcRQJNkSjWIJwodEMUjQPvWs0MtcJmsMoN0sPeh3NuDW9c8zQot+s9e2qlL3V95bjU/AMXU/gQ0tYPQIdIsJJW8tHniKwhJIYsBKs88UFXxOcT6ndB9ZHaCo+K+3pSDJG4a7OuAw+WxSpgeadsZolduIdvUQR0HJtTLHWYa7FOixw4719J25RKwOcQeRopiDJkCrJhQ2ek4DTR6aBQHDRn5rIC7VgWTDE/l9paTFx81GZpIIjqMau2q9QrboKUPKA9l2x8EciBCohc2sRkLctwTIecLpGwnQvdT40K5EoptkwYIEKT6cHGm2uRUnG7nORWC4FFPBuUWbCLPIsq/mQl3ECWqGOdzgau8AJNTzgZue42HZj1cEu8VGlX0pz6FO/FklZ5AbY/IATR97gchYJYooXyHL15pkaW5nWbAQVml9W5NAf/XGdTU/sQMsnA72ZhFvPCSrHnek1vQjPUXBMp+Y3hipeNiKnKRHUO3P7ksFnUtxnnK5c9G8s0Voy/Ie0FzIXZZu8pkqXfMits2FamqSuMLlSUtPEUgP0gLKdkSqL/QrtQKbUQTPL5NP/YHDXrex3ZCnqklluWcbTpRcXlJnf0fXMZJn44XdqrM8P7CpNjrVGCtiq7Rxr/J2jsVvV9s+bTrW+Qole6bvFx2WtHgqtEeclN3bxsf5u0vT6gwr1oEcbgW4E+jEFyrJsQZ1+XNe8OZer9FvrH0TqytRD1XVapXnSFmL6QpDKf2m4ZLq8Rjca3GjwQ2nQyn4/8y/Jku/F7pzicE5qtZmUXqO/05DC2A==</source>
+    <source>eJztVktP20AQvkfKf5hDpBAUMKVVD6E8IkjbA7QRJJwiVYs9xCuc3e3uGoho/3tn147zIEBMObRSfLDs2Xl88+18Xn86VLGqVoLNzWoFNuFYI7MYwdUYurG6sFKPtv1C36BuwRmz1r+ekFcLdneCnQ/B7s67j97Y4yNnbL3fhe6ZswTVSrUi2AiNYiHCZ40mjtDcDM7RyFSHaPaqldQsXRn0NOPWDE4wQYv+5WXnvorYys6XHO8mrgUDRSPQEVaPQedRxVpXy1seIbCQUhmwEqzzxjlvU7gfUec3bIjQVnwKIScnTBilcNWyYnhvUUQG2lfGahba86L4g4MIdLmeCuBNmGm4CfNUZf5ZW+6itmKcguVoCrhkiJTkwk5ci5CjW6aBwHAxnNrIEbVgycQSZA9KS4uhm57aJB/sQz1wJX/kJevPAAtv0L49Jn5LBEEtT9+ZB+ZtyzFlSqANJmzXUqcj8wwixTQb5ZigxqPpikabalGewutUhJZLAQvANyg7gRdpkjSymIc8B115Me+ynznBIfUec7N1sMhA66mFbaKmTndKs5fl/r2EoAWigM3qgAjzBpf4MVtM8UXqXN053jIz05qNoUYzzh5R6td+uR6nSzbW8s7AYKr6zn2IyhFpBm2v2BMUHKPCvGqs4qVDUhodQRww9142+liK64TTCIjhhSV+y8Z/k/azTEXpRs+p1ikfcetsGJVnqi9MqpTUNMTUA33PbG+sSsM/QxvLiJpoJ4m8+ysUbtuV/YosQl02zSVLeLR8/yaKTa9om6ZyDb0anEqbs9P7tFYzDZIkNhpbBxp/pmjsRr37/aJXbz6hUP8N2F78sjaaealVRHvKjZ0/C95Usl6WUKNm9Hgt3LVw/wPhsiSZU62f3RdP2uXq/dJ5hXhdoWZedyUN03hpCwH9W0jlf1NcRv067a6luZbmPytNK4fDxJ+ppY/R/owQcUaBjTmF0e0PIo/JPg==</source>
   </file>
-  <file path="Resources/Topic.php" generated-path="Resources.Topic.html" hash="f181bc92beae7d2caccc5b407e9cc4f4" package="Default">
+  <file path="Resources\Topic.php" generated-path="Resources.Topic.html" hash="b156e9cd67f65a6b8146814c6f68ab00" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matt
@@ -5241,9 +5395,9 @@ See Freshdesk's documentation for details.</long-description>
         <inherited_from>\Freshdesk\Resources\Traits\MonitorTrait</inherited_from>
       </method>
     </class>
-    <source>eJztVU1P20AQvftXzCFSABlMadVDKB8RH+2BtBEknHJZ7AGvcHa3u2sgovz3zq43X1YisMqhByxE8OzMmzdv54VvRypXUbK1FcEWnGhkFjO4mUA/V1dW6vGOiw8N6g70mLXu7ZRyOrC3m+x+SfZ2P311sQEfu1jn8x70exRIokiwMRrFUoRzjSbP0NyPLtHIUqdo9qPSrDwYDTTj1oxOsUCL/uXV3J4UnLi+LXmoMvZW4GuOjyEzSORnlYqnME0Owb6WD5xQgKUEYMBK+nF5egoaEo9Jknt2h9BVfN7RS5YWjCoreHyyKDID3RtjNUvtrN1zFAE9jvmMXgwLU8WwoF0My+L4Wj+Ke2iWHGs8gdoqyYUNKdPM4wemgbhwcTcLURZqwYoQSPyn0tJi6taoNYWCA2gnGTdpaQyXwiS+pWmv5nMrdTk270mIP5A40KqAz9aRqo5XkKpsQXc6J1fj5G5Vs3GgAy2ezQ402lKLhsrdliK1RAqWKW8QMNEWZVFs+ornqp6e0MYnHFQpcAQtm3OzfVgbvLMmvkOCtOk3gex74Je6FMuKAAu7Qzj0t0erXxJTvKaR67QoUBVlWrMJtGiLWV06f/THTTQ7sbmWjwZGc++ePaWonGRm1PUOPEXBMZuF31iqeNOKkrZCWJ4y996w+ESK24LTTYu7K0uCNiz/Ke25LEXTIS+p0wUfc+timDUWaShMqZTUtKg0AH1N2cFENeXeQ5vLjCboFoV8/BcO7rqV/YEsQ90Q5ZoVPFt5ccGQ5U3h1nvqxtSvvXNhvLiw67xYmYwcsLG5fajxd4nGbrT7v64G7Xi1Bb3BnQ3DF+RmHDq84scLbmzlRUP+ehcvesNBi0jryYcjPxz5fzqSFcWSHf26vvIvcrUtv581caXDj0O7uTlfor8wObBC</source>
+    <source>eJztVUtP20AQvkfKf5hDpAAymNKqh1AeEY9yIG0EgVMuG3vAK5zd7e4aiGj/e2e9dpyERMQql0qsIss7O49vvp3P+XakEtVshFtbzQZswYlGZjGG0QT6ibq2Uo938oMbg7oDPWZtvj0lrw7s7Ya7X8K93U9fc+OAj52x83kP+j1nCZuNZkOwMRrFIoRzjSaJ0TwMr9DITEdo9puNzCw9GQ4049YMTzFFi/nmbeeeFJwwr+l9o2K2dupbjk+l65Qv37ZUPIIyYGrua/nIKRewiNIYsJJ+zlOXqaeux0TPA7tH6CpeVS4YjFJG0b4IPlsUsYHuyFjNIlsVfXGogJZrY4o1gJkeA5jhMoAFrny078st6ivBBcRAxZXkwpY+U9/jR6aBMHFxX9nIEbVgaWkJ/YvS0mLkpqxV5oMDaIcxN1FmDJfChHld016J607qbGzeHRh/JLKg5bOfrQLnj5eD8wKi265ALmJz163ZuEAFLR5XJxptpkV9Ju8yEVkCB/PQNyg5wRdZmm76kJciBa2iVu5y4J3gCFo24Wb7cIGCzgr7DlHTpicl2feZ/yxhZYEdYMVcUTJ6z1O+vjim+CJjruIcXd7MtGYTaNGgs1dM5me/XW/VkU20fDIwrNR+9hyhcvyZYTdX6ykKjvHUvG6s4rVDMpoUYXnE3L5u9IkUdymnmxf315aYrRv/Q9pzmYnajV5RrUs+5tbZMK7P1I0wmVJS0+xSD/RRs4OJqg2/hzaRMTXRTVP59E8o3LUre4EsRl03zS1Lebz8/kqhZqPUzXup0ijXgVNnMDu9qzXqxUeS2NjcPtT4K0NjN9r9n9eDdrBcmrn0nTyLT+lmUNRYR6eX3FivUUOiezeN5jqEFqHXkw+lfij1P1AqS9M5meaz++Zf6nK5fj+ro1ZXISgKzomWHn8BJgy1fQ==</source>
   </file>
-  <file path="Resources/Traits/AllTrait.php" generated-path="Resources.Traits.AllTrait.html" hash="4ff6abb5f7c7e4c52a4be78346f188ac" package="Default">
+  <file path="Resources\Traits\AllTrait.php" generated-path="Resources.Traits.AllTrait.html" hash="6c42cf0c169bdbaa9706ab049b299a22" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matthew
@@ -5259,45 +5413,49 @@ Time: 9:10 AM</long-description>
         <long-description></long-description>
         <tag name="package" line="16" description="Freshdesk\Resources\Traits"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources\Traits" line="50" package="Freshdesk\Resources\Traits">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources\Traits" line="51" package="Freshdesk\Resources\Traits">
         <name>all</name>
         <full_name>\Freshdesk\Resources\Traits\AllTrait::all()</full_name>
-        <docblock line="50">
+        <docblock line="51">
           <description>Get a list of all agents.</description>
           <long-description>Use filters ($query) to view only specific resources (those which match the criteria that you choose).</long-description>
-          <tag name="api" line="50" description=""/>
-          <tag name="param" line="50" description="" type="array|null" variable="$query">
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="" type="array|null" variable="$query">
             <type>array</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
             <type>\Freshdesk\Exceptions\AccessDeniedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
             <type>\Freshdesk\Exceptions\ApiException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
             <type>\Freshdesk\Exceptions\AuthenticationException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
             <type>\Freshdesk\Exceptions\ConflictingStateException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
             <type>\Freshdesk\Exceptions\NotFoundException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
             <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
             <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
             <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
             <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
             <type>\Freshdesk\Exceptions\ValidationException</type>
           </tag>
         </docblock>
@@ -5308,9 +5466,9 @@ Time: 9:10 AM</long-description>
         </argument>
       </method>
     </trait>
-    <source>eJylVEtvEzEQvu+vmEOlbqK0SSqERAqlUV8cCEJtyikXxzvJjrprG3uWsCr974w3D6JSIRZ8SOLP8803z7x973KX9LvdBLpw4VExZjCv4XPu7tj68jji9wH9CCaKOcdVBC7FbAQnw/7gVf9kMHwdsSmVgr0ZDQcwngjQTxKjSgxOaYRrjyHPMDzMbjHYymsMs6lXxOE02aqPiwIaTC7xfi7MB7X8E7mR4fgzstfkxyQBOY3TeBpHXpVgKhE4QJNBYE9muXv2yJU3z1EyjN6oYgP0m281FyulGZy3jDoWa1EZzWQNiGdnhZU2Gu8avc7p79Fs5Ga/0ho7+ndZ5Sh9QeYGGRQUFBjsApSkLqU0HI43Bls76S0sqBDRAOnB1wp93QG28I1wBdYUNQSHmhakwW+rDynnVnirnHQOpWL5lNEA7Un8kJKLYqhtBTq3Yth5Lnqu9jJed0d5r+of6x41UezeOfd2FfbrdfVdo4vJh9lYSzzhEg1htoP/kuqoLaOSLA2TVvHeknxhzaIg6ZlZ3rHsT0v6J8vXtjJtk7wVpY9UEkcMs9ZFujehcs56GTlJgCX7ae3axj5BmZdMMpAltav/iSG22/EHVBn6ll6+qIKyFxu33jFXzaU9e3tVFGkzlJt53G50Y/y4pso54JzC0VmzhUdnHsU2cHp4czU97G0fd/8MnV7jo7dxKWsbXTwlydNPjYbKpg==</source>
+    <source>eJylVN9v2jAQfkfif7gHpAZEC1TTpNGtK+qvPYxpaumeeDHOQawmtmdfRqNu//vOIQEk0LSoVhTFn+++73w/8vGzTWy7Nej12i3owbVDQRjDooDviX0k47Kz8uDJoxvDVBAluC6RGzYcw/loMHw3OB+O3pfgTGUMfhiPhjCZBmTQbrVbWmTorZAIdw59EqN/nj+gN7mT6OczJxT5i2BYhzFJUyjhsCuRK3Z/Fqt/MVRyFDaBoSJ4DcTAa0MeVknnRAY6Z6EO6hg8OaVXu3OHlDt9ACtN6LRIa2Sw+RALNhSSwDpDKEMGl7mWpIwGZreG/aJS51Op2b04GlQlOt/dcWLVm8SFVdFxsXskEJAqT2CWIDgPnF1N/qy22Fpy6WGpUtb2EHV+5uiKLpCBXwrXYHRagLco1VJJcHVJIKLEsN86UTKBTBC/uXNAOsU8SvBGEBQmB5kYNuweyl6J/btv6iWcE8XvTdXKQA5yt7PYHVHizNrvp/X2RaINCfLzieRw/Q1qhfEW/l9fqxq75JwGTUqKsG/qfW30MlVcWr16JJ6/pv7fDN2ZXDe+6ANrfVWZooBh3DxTT9rn1hrHzcl3IM7ArLCNw58id1XMl+DpNus3RRHKbukLihhdU5ofIlXx8fpVI2nzBZdpbwzTNCo7s2rb+jewsX6tvHlVXdyhRPnTy3J6Ty8dspOn6OT+dnbSrw+3/5VuvyTrV9xh3APVn3aLn7/Ooth7</source>
   </file>
-  <file path="Resources/Traits/CreateTrait.php" generated-path="Resources.Traits.CreateTrait.html" hash="26a1ec57fa225bd7bb13aa0df6089213" package="Default">
+  <file path="Resources\Traits\CreateTrait.php" generated-path="Resources.Traits.CreateTrait.html" hash="f6a744a4076b2f0ca2d0873a98d73544" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matthew
@@ -5378,9 +5536,79 @@ Time: 9:10 AM</long-description>
         </argument>
       </method>
     </trait>
-    <source>eJylU01v00AQvftXzCFSk6jFSYWQSKA0aqk4EKgal1MuE3sar+rsLrtjhajtf2d2Y9JQCsKwF3vfzJs3Hztv3tnSJmm/n0AfzhwhUwGLDVyWdsbGrV4E/NqTG8EUmUtaB+Bc3EZwPEwHL9PjwfBVwDK1Euz1aDiAyVSANEk0rshbzAkuHPmyIH87vyJvapeTn2cOFftxkvwsDxGXe4BOhX2Lyz8FiFIcfpsAW/5dkoCcGDqcGMvhCnRdVdAhXYBnp/RyZ3bEtdNPUaWZnMaqAdL4xYV4Yc5gnWHKQ89uap2zMhoksjXC6kaNt1GvN/41m0Zu/ljZxKp/l0Wrus/IND1FcE3bGsNv7bBWXIIMGnxtbaVEo0DGJ7RT3Mt121d0DjfQCc6QCX2PtSs2+tyHjuwsXDqz9vtteP8tJxtq8vNJLnP256QljR38l1Sr2jJqqVqzyjHcW5LPjL6plIxCL2csHW1J/2T4wtS6bZFXovRRrRQHjIrWTbrWYcjGyUuSAliqzza2be5T4tIUUsGkqsz6f3II47b8gbAg1zLKF6xU8ezgtqtj64WM53Fd8vjuu3uPthf97rYsOR0ulT86iXt1dOLoa02euweXn2fZweEP627Ze4dNlHEM8JA8fAcIPbk9</source>
+    <source>eJylVE1v00AQvUfyf5hDpCZRi5MKIZFAadRScSBQNS6nXDb2NF7V3l12xwpR4b8zu3Y+RAPC6soH+83Me/O1fvfB5CbqxINB1IEBXFkUhBksN3CbmzlpW74KhnuHdgwzQZTjOiDX7DiG81E8fB2fD0dvApjIksG349EQpjOPxFEn6ihRojMiRbix6PIM3ePiDp2ubIpukVghyU2845+JQLB5IICXzPEoVv+iaTTJfzQkDceTpwc+tYQ/gdGKElRVFNBFlYEjK9Vqb7dIlVXPYKkIrRLFFonrF7FkR5ESGKsJU9/Jh0qlJLUCZjea43pB533Q7E+OJtWILvZlTo18kbgwsndcrGm0ANt0cmv5uwesJeXAiwCuMqaQLJQJEs8CL8Vh1nWnhbViA13vDwkzHAbuCg9OP32D9ibKrV67w558/JGi8dW5xTTlDXDXqDiXHfy/sUa2Dqm4eEUyFf67bfSVVg+F5Lmo1Zy4s23jv2i60ZVqXegda32WpSSPYda+U/fKz1tb3iyugbgDyca0Tn+GlOuMi5gWhV6/KAs/dkOfUGRo29J8E4XMjs+vuU+mWvKY9ncoDfegd7DB/drxqQnk0yxwl3Lpzi7CrTu7sPi9Qke9k9uv8+TkdGvd/RD6pw3dpCb6FXX4+Q3QOb7f</source>
   </file>
-  <file path="Resources/Traits/DeleteTrait.php" generated-path="Resources.Traits.DeleteTrait.html" hash="910c2cb253d260d2dcdd6808eb7571fd" package="Default">
+  <file path="Resources\Traits\CreateWithAttachmentsTrait.php" generated-path="Resources.Traits.CreateWithAttachmentsTrait.html" hash="2ac26346f1b73db7d688e0719fcc64db" package="Default">
+    <docblock line="0">
+      <description>Created by NetBeans.</description>
+      <long-description>User: David
+Date: 05/06/2017
+Time: 11:55 AM</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <trait namespace="Freshdesk\Resources\Traits" line="16" package="Freshdesk\Resources\Traits">
+      <name>CreateWithAttachmentsTrait</name>
+      <full_name>\Freshdesk\Resources\Traits\CreateWithAttachmentsTrait</full_name>
+      <docblock line="16">
+        <description>Create With Attachments Trait</description>
+        <long-description></long-description>
+        <tag name="package" line="16" description="Freshdesk\Resources\Traits"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources\Traits" line="50" package="Freshdesk\Resources\Traits">
+        <name>createWithAttachments</name>
+        <full_name>\Freshdesk\Resources\Traits\CreateWithAttachmentsTrait::createWithAttachments()</full_name>
+        <docblock line="50">
+          <description>Create a resource with attachments</description>
+          <long-description>Create a resource with the supplied data</long-description>
+          <tag name="api" line="50" description=""/>
+          <tag name="param" line="50" description="&lt;p&gt;The data&lt;/p&gt;" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="50" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+            <type>\Freshdesk\Exceptions\AccessDeniedException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ApiException">
+            <type>\Freshdesk\Exceptions\ApiException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+            <type>\Freshdesk\Exceptions\AuthenticationException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+            <type>\Freshdesk\Exceptions\ConflictingStateException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\NotFoundException">
+            <type>\Freshdesk\Exceptions\NotFoundException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+            <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+            <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+            <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+            <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\Freshdesk\Exceptions\ValidationException">
+            <type>\Freshdesk\Exceptions\ValidationException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+    </trait>
+    <source>eJylVMFu00AQPeOvmEOkplFKEqSAFKA0NFQcaEFtCpdcJvY0XtXZXXbHDVHpvzO7MYmpIsDgi+3Zee/NvNndV29sbpNep5NAB04dIVMG8zVcEL8l1P5piF97ciOY4J3Kwu9EkkbQH/b6z3vP+oMXITZVS4kNBqPhEMbnEuklicYleYspwZkjn2fkb2eX5E3pUvKzqUPF/mXyqzh8UZzDmBnTfEmaPcQ8SQg5J8J2i4vfEUZpDp8VYyCs8W3o7pMnUTY8kdbhEnRZFNAinYFnp/Riu+yIS6cfR5VmchqLKtCLb5xLFqYM1hmmNLh5U+qUldEgzNYIqh01Xke9QzEg4OrVVHKzXZNjq/5dFq1q75Gp/EZwlYOwCtbjzqoq8w8Azgl8aW2hRDRDxkewE6wVvzEancM1tEIyTAVeQ227jznfg0XbFc6dWfm6L+++pWRDk342TmUP+AlpKWMb/kuoVU0RpXStWaUY/huCT42+KZTMRi+uWBxtCL8wfGZK3bTJS1H6oJaKQ4yyxiZd6zBk42RrSQMs3U/Xtmnt58S5yaSDcVGY1f/UEMZt+T1hRq4hy2csVLZ3cJuzZMu5jGd3ftJ910i7tocPI+x+QyJPtYNbnCt/dByP39Gxo68leW4ffPp4NT3o/lzd3gmH3Q1ZN14LXWBXkpzawPeQPCQ/AEdO18c=</source>
+  </file>
+  <file path="Resources\Traits\DeleteTrait.php" generated-path="Resources.Traits.DeleteTrait.html" hash="dda7ee4b712aca537bb997f52a9e62f1" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matthew
@@ -5448,9 +5676,9 @@ Time: 9:10 AM</long-description>
         </argument>
       </method>
     </trait>
-    <source>eJylU99P2zAQfs9f4YdKlGosLZqQVgajokV7oGiCsKe+uPHRWCS2d76oqxj/+85uSBFj0zL8kvi7++67H75Pn13hknQwSMRAnCNIAiWWG/G1cDdksXof8FsPOBZzSVTAOgBTdhuLw1E6/JAeDkdHAct0xdjH8WgoJnMG0iQxsgLvZA7iAsEXCvz94hq8rTEHv8hQavLHyZP6FEogEBHme4DOmHwvV3/jRyUKv02ALf8hSQSfGDqcGAtlJUxdlqIHRglPqM2qNSNQjeYlqg0BGlk2QBq/csleMifh0BLkoWV3tclJWyM4srPM6keNk6i3f/x7No3cYlfZxOn/l5VO91+RaXoqBTZtawx/tIfZ97R64XYmn+W27aM2wU9kBey4La8tTyLKzc/Qg9ZCBdq1f1747EcOLlThF5OcJ+unYDSoFv5HqtNdGTW/Z0M6l+HekXxuzV2puflmdUO8Dh3pV5YubG26FnnNSpe60hQwUJ2bdGt87ZxFfjtcAHH12cZ1zX0OVFjFFUzK0q7fkkMYt6MvIBVgxyjfZKnVq4PbLourlzye3YKo+NL7/Gb3o/1h682nR4X2B6dxgw5OEb7X4Km/N51dzrLZ3rsn+26xOQSvWqA+JsnjL8GMr7U=</source>
+    <source>eJylU01r20AQvQv0H/ZgiGOayg6lUKdNY2KHHuJSEqUnX9baibVE3t3OjnBN2v/e2bUcBeKWiiw+WG/mvfn++NmVLk2ywSBNxEBcIkgCJZZb8a10t2Rx/TYa7jzgWMwlUQmbiEzZcSxOR9nwXXY6HL2PYK7XDH4Yj4ZiMg9IliZpYuQavJMFiCsEXyrwD4sb8LbGAvwiR6nJnwXHfRpTqIBAREsAInjBCg9y9S+RJiKFj0ak0XgM8oLfLkR4URHlWpi6qkQPjBKeUJtVa0egGs0LWBsCNLLaI9nuj1yyoyxIOLQERejjfW0K0tYIVneWef0Y51OMeXx2MKkm6KItc+L0q4JLp/uHgzWNlgKbTu4tf/cIu9HT6oXjhXye5a6z2gRXkZfQ0lvqU6kSUW5/hZa0JirRbvzzLsx+FuBCPX4xKXjmfgpGg3qC/5frdGdKzVtvSBcyfHdlX1pzX2mehFndEh9NV/5XS1e2Np0LveFY13qtKWCgunfqzvjaOYu8S1wDcQfyreuc/hyotIqLmFSV3bwqizB2R19AKsCuMt9lpdXh+TUX5Oolj6m9GhU3v88LfLxzeGwI/JrF7VGp/cl5vK+Tc4QfNXjqH01n17N8dvRmb2+Pn7XCIQaJ32nCvz9jBrVA</source>
   </file>
-  <file path="Resources/Traits/MonitorTrait.php" generated-path="Resources.Traits.MonitorTrait.html" hash="948a5f3eb7ddf9d24a2176525bb27442" package="Default">
+  <file path="Resources\Traits\MonitorTrait.php" generated-path="Resources.Traits.MonitorTrait.html" hash="6df17e2c8815758511a5938328f34cc7" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matthew
@@ -5632,9 +5860,9 @@ Time: 10:23 AM</long-description>
         </argument>
       </method>
     </trait>
-    <source>eJztVltv2jAUfs+v8ANSANEG2LQHurKi3lZpbFWBvYxpMsmBWE1sz3bGUNf/vuPcQJRuzfrQh+GXJJ/Pzcfn+5S372QoHa/ZdEiTnCqgBgIyW5HrUI6MUPGhxScaVI8MqTEhLC1whmY90u147ddet915Y7ExixHrtHvdV2QwRMRzHE5j0JL6QC4U6DAAfTu9AS0S5YOejhVlRh85Rfqh4AxzkhRHwGIn6H1LF38KkKYy9rWIkAW4cxyCKw1uVxpM0ZhooxhfkBrwIH8vDRSYRPFtlHEDitMoB7z0SWdoRX1DpBIGfNu3ecJ9wwQnGFkK9KqnOY4JT6KocfSwnjzddH24gWT/npZKVt+RpugrJSpvXb7zuAGZ4yfeNlmwH8BJggOw5XNCNyrN+lpjARmjDz7EPPXeylca2nhX28YbScrOUKXo6pdtX7ljQiWWerNn5z99kLYBejrwcS70GXAGQQk/0VWyqh4Jls0N86n9ruh8Kvg8YnhvfDEySKeK7h+FuRAJr3rIG8z0gcXMWAyCyk2acJ1IKRSOHR7A4OnHK1m19iGYUAR4gkEUieVzarDXLc17oAGoilE+04gFOy8u45lMZng9a27FGUfqOOStYoAbqeVd5oerhgEp0v1LidjlWuNvLHDJcb/wLA2+5nS1K5/5mgmZPuinZD7oK/iegDZ19/rTaOy2it21wiCBDonrzYVtpttoZVWgDNiQ9w/EYMLjv8nBLpO9IOwFYS8Im4KQ8CdJArJXrV5cEyxhWnkxj0pD8RugcfwSvUXvSzApKfND2x+ozK5gqxHStieXib1A7AXiPxeInCmjlCUvKBKX58/QiPvf2WqSeQ==</source>
+    <source>eJztVltv2jAUfkfiP/gBiYtoA2zaA11ZUa+TxlYV2MuYJpMciNXE9mxnDHX77zvOhaCCWCMetodYSCTH5+bP5/uUt++kL6sVp9WqVkiLXCqgBjwyX5N7X46NUOFpvDHVoPpkRI3xYRVbrtCxT3pdp/Pa6XW6b2LjhIVo7Hb6vVdkOLImp1qpVjgNQUvqArlRoH0P9OPsAbSIlAt6NlGUGX1mHbM+RoIzLE7iLWuJrReY4pEuD2VJSxr7kmVJkzzZAgRXUsSuOKWiIdFGMb4kNeBe+px7KDCR4jtmxg0oToPM4iQPdI6O1DVEKmHAtWAuIu4aJjjB7FJgXCOuc054FATNs71tpUVn+UmHkh1VnErW2F8sA5sSlaKZbR1wIQt8xWEgS/YDOIlwPnaiLuh2zwnSNeaRCYbhn1jECZ4X3XjanO+fe28X2sBElaLrXxbOfMv4Sqz0NoLXP12QFgs9G7o4MvoKOANvY35prGSFQyJsnRvmUvteNPpS8EXA8Bb5cmyQdUXjPwpzIyJe+KAPWOsDC5mxNvCKIzXlOpJSKJxDPINBBCZrWbj9ERhfeHiIYRCI1VFd2GuX5g6oB6poms80YN7++0vZJ6M5XlPOuDAhTQNHvp1NczNxfUpDcdUwKUUx+JKb7Kpb/2/Mq5PzQRace3zdENmulAU14zN9MoiJfjJQ8D0CbRr1+0/jSb2d7eYahJw6JXVnISys9WY76cRKhM35e59STHn4d63Y51SqRakWpVocVIuIv1AvkNZq/V8IhqVQO23ooG5knw8aBzLSO8y/BROzNQXAfoklnhmNjZAWqlRDSvUo1aNUj73fGuOYNv9cQW6vjxIQ/P0BDgCYgQ==</source>
   </file>
-  <file path="Resources/Traits/UpdateTrait.php" generated-path="Resources.Traits.UpdateTrait.html" hash="180dc719ab77eb4e0436ff5874be86ea" package="Default">
+  <file path="Resources\Traits\UpdateTrait.php" generated-path="Resources.Traits.UpdateTrait.html" hash="09ca659a513824110a271dc84ac1ac3c" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matthew
@@ -5710,9 +5938,87 @@ Time: 9:10 AM</long-description>
         </argument>
       </method>
     </trait>
-    <source>eJylVFFv2jAQfs+vuAekAqINVNOkwdYVtav2MKaqhT3xYuIjsRpsz76Moa7/fWeTAmPVtGx+SfL5vu98353z9r0tbJJ2uwl04cqhIJSw2MBtYe/JuNVZwGce3RAmgqjAdQCuOWwI54O0/yo97w9eB2yqVoy9GQ76MJ4wkCaJFiv0VmQINw59IdE/zO/Qm8pl6OdTJxT5UZI8p59ZyboQcf4O0CWzH0T+J4GYisJrLbDlPyYJ8IrSYUUtJ1agNGGODlqoJXhySue7CIdUOX2MBobToqyBND7FgqNERmCdIcyCbctKZ6SMBla2hlntmOMd6KosO6PfD1Snm++LG1v172mFVe0X0tS2CnC1c/XGr/seuLm7EA9L4yKSq2+ooaUkrBUVEfKVtaXizMwT6dmR3KU4qGFneVSYHmQAJY+ihHNiA60gGiPDy7FVMeZH8HO3Q4Uza39o4ofvGdrgiJ+PM67FX6Pm4+7gv6Ra1ZRRsTuaVCbCd0PyldHLUnEjdX5P3I+G9M+GbkylmxZ5x5k+qZWigKFsbNJMh2EwjueQCyCufrqxTc8+QSqM5ArGZWnW/3OG0G5LH1FIdA1VvohSyRcbt714tlpwe/aXrYq3ps1j3Tuc3E4MftxSedVz26JC+dOLeENPLxx+rdBT++R2Nj3pPW/u/xpKdnq13CgqPSXJ00/6WdMS</source>
+    <source>eJylVE1v2kAQvSP5P8wBKYBIDFFVqdCmQUmjHkoVJdATl8Ue8Cpmd7s7LkFp/3tnF4NRQFWtrHyw37x587n++NlkJmrEnU7UgA7cWBSEKcw3cJ+ZR9J2dREMU4d2AGNBlOE6ILdMHMBlP+69iy97/fcBnMgVgx8G/R6Mxh6Jo0bUUGKFzogE4c6iy1J0T7MHdLqwCbrZxApJbuiJVSJTk7I+BJsHAnjNGk9i+S+ZMib5j1Kk1Hjx8sBnG8KfoGjFCqQiXKKFJqoUHFmplhXFIhVWHcHexyqR75B4+yLmTBQJgbGaMPHNXBQqIakVsLrR7NcKcT6BKvK8PTyZVxl0VlU6MvJNwYWRrdPByl4LsGUzd5ZXDAc8/D3JwULbgCzlL1TQlCmsJWUBcoUxueTw7CfiiyPBa3FYzX4IQWRyEARk+pomrBUbaHrhQPUvR30LpN++v5WJMqvX7rClX54TNL45bjZKuCJ3i4qT3sP/62tkbZeCu6RIJsJ/1/W+0WqRSx6rWj4SD6au/3dNd7pQtQt94Fjf5EqSxzCt36mp8ouhLS8m10DcgcnG1E5/jJTplIsY5blevykLP3ZDX1GkaOvK/BC5TE/Pr7yOppjzmKorWIRr1OIl7x6ucXvLfim9+ZRb3KRMuvOrcHPPryz+LNBR6+x+Ojnr7ozVP0Wm7W4pONxK/Yka/PwF5q7V9w==</source>
   </file>
-  <file path="Resources/Traits/ViewTrait.php" generated-path="Resources.Traits.ViewTrait.html" hash="1b96f20560226afbc928504dc0ae4b77" package="Default">
+  <file path="Resources\Traits\UpdateWithAttachmentsTrait.php" generated-path="Resources.Traits.UpdateWithAttachmentsTrait.html" hash="13604f3546bf04a86539f1666cbfd2ee" package="Default">
+    <docblock line="0">
+      <description>Created by NetBeans.</description>
+      <long-description>User: David
+Date: 05/06/2017
+Time: 12:02 PM</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <trait namespace="Freshdesk\Resources\Traits" line="16" package="Freshdesk\Resources\Traits">
+      <name>UpdateWithAttachmentsTrait</name>
+      <full_name>\Freshdesk\Resources\Traits\UpdateWithAttachmentsTrait</full_name>
+      <docblock line="16">
+        <description>Update With Attachments Trait</description>
+        <long-description></long-description>
+        <tag name="package" line="16" description="Freshdesk\Resources\Traits"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Freshdesk\Resources\Traits" line="51" package="Freshdesk\Resources\Traits">
+        <name>updateWithAttachments</name>
+        <full_name>\Freshdesk\Resources\Traits\UpdateWithAttachmentsTrait::updateWithAttachments()</full_name>
+        <docblock line="51">
+          <description>Update a resource with attachments</description>
+          <long-description>Updates the resources for the given $id with the supplied data/.</long-description>
+          <tag name="api" line="51" description=""/>
+          <tag name="param" line="51" description="&lt;p&gt;The resource id&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="51" description="&lt;p&gt;The data&lt;/p&gt;" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="51" description="" type="array|null">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AccessDeniedException">
+            <type>\Freshdesk\Exceptions\AccessDeniedException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ApiException">
+            <type>\Freshdesk\Exceptions\ApiException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\AuthenticationException">
+            <type>\Freshdesk\Exceptions\AuthenticationException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ConflictingStateException">
+            <type>\Freshdesk\Exceptions\ConflictingStateException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\NotFoundException">
+            <type>\Freshdesk\Exceptions\NotFoundException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\RateLimitExceededException">
+            <type>\Freshdesk\Exceptions\RateLimitExceededException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedContentTypeException">
+            <type>\Freshdesk\Exceptions\UnsupportedContentTypeException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\MethodNotAllowedException">
+            <type>\Freshdesk\Exceptions\MethodNotAllowedException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\UnsupportedAcceptHeaderException">
+            <type>\Freshdesk\Exceptions\UnsupportedAcceptHeaderException</type>
+          </tag>
+          <tag name="throws" line="51" description="" type="\Freshdesk\Exceptions\ValidationException">
+            <type>\Freshdesk\Exceptions\ValidationException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+    </trait>
+    <source>eJylVFFv2jAQfl5+xT0gFRBtKNI2iW1dWVnVh7WqOtheeDHJQawG27MvZajrf9/ZSSFFaFq2vCT5fN93vu/Ofv/RZCaKu90IunBhURCmMN/ADdInFMqdeHzq0A5hLB5k6n/HHDSE/uu4/yYe9E/femwiV4ydDob9AdxeMxJHkRIrdEYkCJcWXZaiu5/dodOFTdDNJlZIcu+i5+RTk7IufJeUwYhIJNkKFTkIcRzgY85Z7V4s/yQYUpP/rBS9YE2vlHuMXoW0/gmyVqxAFXkOLVQpOLJSLbfLFqmwah+VitAqkVdAHN5izlEiITBWEybezUWhEpJaASsbzax2yPEh5OuwAZ5X302VbrYrcmTkv6cVRrYPpKn8FmArB2HtrRc7q6rIlwQHlOGW42ChbUCW8gEVtGRaynjIFcbkkrfCPBGf7Mmdi1pRZQO4tKAwqWUAP3MvooS1YgMtLxoi/ce+dyHmlzd4u0KZ1WtXd/XzzwSNt8jNRgnX4saoeLtb+C+pRjZlFOyOIpkI/9+QfKHVIpfcWbX8StyPhvQbTZe6UE2LvONMX+RKkscwbWzSVPlh0JYHkwsgrn6yMU33fo2U6ZQrGOW5Xv/PHny7DV2hSNE2VPkmcpkebFx5Ek0x5/bsTl9x6BJq85T36oPcCdzHUomfaoxblEl3fBZO8PGZxR8FOmof3U4nR73nxd2tItNOr5TrhbulB2QL5KPvFZ+ip+g3Bwvtpw==</source>
+  </file>
+  <file path="Resources\Traits\ViewTrait.php" generated-path="Resources.Traits.ViewTrait.html" hash="efa71404bed9b05bde8a260be299dba1" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: Matthew
@@ -5791,7 +6097,7 @@ See Freshdesk's documentation for details.</long-description>
         </argument>
       </method>
     </trait>
-    <source>eJylVE1vEzEQve+vmEOkpFWaNAUhEaA0alNAIqhq055ycexJ1qrXNraXNIL+d8bezYeiCrHgS7LP8958et5/tLnN+sfHGRzDpUMWUMB8DTe5vQvGFb2I33t0Q5iwEHJcReCKzIZwNuifvu6fnQ7eRGwqC8LeDgenMJoQ0M8yzQr0lnGEa4c+F+gfZ7foTek4+tnUMRn8u2zj/UHiChJIXxG4IOojW/6JXVn2sxC/kkIl8DMDOkk4nqTlWAFSB1yigxZqAT44qZdbC4ehdPoQjQynmaqBfvplc7JiPIB1JiCPNVuUmgdpNJCyNcTqJB8fQJdKHVGWhwHV7ma75EZW/rtbZmXnBTepqAxcXbca3txSY6EtNVelwDYEA1jMSZQJIaMoUyAwMKk8FQ6o+VHHGu2xB2PGc6ipsJJKAaeLskBgel+AO6T/vY3Ha+MAn1hhFYJcwNqUtc9K/XuJnhInDUF6hWV6TU4WNIgsZRntk7M5As+ZW8ZoKfBAnswCXsHo5kvt0gPRkixnSm0DuMO9eWp7EIZT0DpU+pFSp9w7qNUF22vPdpqgJQVMq8qkCoMUB1bMObb+FccAWpSfWx+OwM5gexNyZ1Z+fzjGTxxtjNHPRpwegL9CLVFs4b+kWtmUUVIJdZA8Fagh+dLohZI0oHp5RxXGhvRvJlybUjdN8pY8fZWFDBFD0bhI9zTH1hpH74sSCJT9dG2bxj7BkBtBGYyUMqv/iSG224bPyAS6hioPTEnxYuOqhWLLObVnt0R+0Lbo0ER3q5ms53WzxBKl2qzxtEIu/cl5Wjwn5/Xb7bQ/jaft7uZytwylOOommW6tSssqqjxn2fNvVLke1Q==</source>
+    <source>eJylVE1vGjEQvSPxH+aABIkIJGlVqbRNg/LRVmqqKJCcuBh7YK14bdf2lqC2/71j78KiElVdZcVhGc+8N/P8dt5/tJltt4aHh+0WHMKFQxZQwHwNt5mdBOPyQTq49+hGcMNCyHCVIpeUOILTk+Hx6+Hp8cmbFJzKnIJvRyfHML6JkWG71W5plqO3jCNcO/SZQP84u0NvCsfRz6aOyeDfxcRNGw8SV5Di8W8KnVP9I1v+C2KTS5whBhJMhfKTDugpCeKTEB3LQeqAS3TQQS3AByf1sk5xGAqn98KxxmmmNpFh+cLmlMh4AOtMQB6FXBSaB2k0ELo1VNdLPB9AF0odpKH3+qpIZ/WkYytfRM6s7D1PlpRm4CopN/HtOd07dKXmqhDYhWAA8zkhMyFkRGYKBAYmlScdgbwRkazRHgdwxXgGVSmspFLA6aDIEZjeBeAO6X2wpbw2DvCJ5VYhyAWsTVGRlvDfC/QkAIEIAswt02tiWZBTWZo15ie2OQLPmFvGdqnzQFRmAa9gfPul4vRAZQmWM6XqDia4Y7OuB2E4ta1DSRBrqqEHe3qds92r2joMOlLAtJQnCQ1S/J3GnGPrX9EX0KEh3XrPEXVGfRQyZ1Z+1yxXTxxt7NTPxpy+Dn+JWqLYhv+31srGJQVpqYPkSaim1RdGL5Qkw+rlhKTGpvXfTLg2hW486B1xfZW5DDGGorlS9+Rqa42jT45mCKTAdG0bt3+DITOChhgrZVYv6iJeuw2fkQl0TWEemJLi+furFo0t5nRN9XL5QSukR/7ul/6szLtZcWVNtX7jU3m5EzLpj87SZjo6qz7rXvfT1bTb3xzWO1OKg37C61fwcZtFtN/tFv3+AM1HJIc=</source>
   </file>
   <package name="Api" full_name="Api">
     <package name="Resources" full_name="Api\Resources"/>
